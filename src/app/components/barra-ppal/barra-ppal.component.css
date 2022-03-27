@@ -1,0 +1,18 @@
+.container {
+    background-color:midnightblue;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 10px;
+   }
+
+a {
+    color: white;
+}
+
+p {
+    color: white;
+    font-size: 10px;
+    font-weight: bold;
+    padding-left: 20px;
+}
