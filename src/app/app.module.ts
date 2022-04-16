@@ -6,6 +6,7 @@ import { EncabezadoComponent } from './components/encabezado/encabezado.componen
 import { BarraPpalComponent } from './components/barra-ppal/barra-ppal.component';
 import { BotonIngresarComponent } from './components/boton-ingresar/boton-ingresar.component';
 import { DatosPersonalesComponent } from './components/datos-personales/datos-personales.component';
+import { AcercaDeComponent } from './components/acerca-de/acerca-de.component';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { DatosPersonalesComponent } from './components/datos-personales/datos-pe
     EncabezadoComponent,
     BarraPpalComponent,
     BotonIngresarComponent,
-    DatosPersonalesComponent
+    DatosPersonalesComponent,
+    AcercaDeComponent
   ],
   imports: [
     BrowserModule
