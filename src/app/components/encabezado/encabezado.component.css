@@ -2,7 +2,7 @@
     background-color:whitesmoke;
     display: flex;
     background-image: url("/assets/Fondo2.jpg");
-    border-radius: 10px !important;
+    border-radius: 10px 10px 0 0 !important;
     background-size: cover;
     background-repeat: no-repeat;
     background-size: 100% 100%;

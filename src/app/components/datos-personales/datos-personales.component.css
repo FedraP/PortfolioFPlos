@@ -1,0 +1,17 @@
+.contenedorDatosPersonales {
+    background-color:transparent;
+    display: flex;
+    border-radius: 0 0 10px 10px !important;
+    border-color: transparent rgb(122, 139, 156) rgb(122, 139, 156);
+    border-width: 2px;
+    border-style: solid;
+    height: 150px;
+    margin-top: -2px;
+}
+
+p {
+    margin: 0;
+    /* position:absolute;*/
+    text-align: justify;
+    padding-top: 30px;
+}
