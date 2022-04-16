@@ -8,6 +8,7 @@ import { BotonIngresarComponent } from './components/boton-ingresar/boton-ingres
 import { DatosPersonalesComponent } from './components/datos-personales/datos-personales.component';
 import { AcercaDeComponent } from './components/acerca-de/acerca-de.component';
 import { ExperienciaComponent } from './components/experiencia/experiencia.component';
+import { EducacionComponent } from './components/educacion/educacion.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { ExperienciaComponent } from './components/experiencia/experiencia.compo
     BotonIngresarComponent,
     DatosPersonalesComponent,
     AcercaDeComponent,
-    ExperienciaComponent
+    ExperienciaComponent,
+    EducacionComponent
   ],
   imports: [
     BrowserModule
