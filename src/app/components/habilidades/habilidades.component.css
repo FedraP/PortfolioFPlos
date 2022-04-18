@@ -1,14 +1,14 @@
-.contenedorAcercaDe {
+.contenedorHabilidades {
     background-color:transparent;
     display: flex;
     border-radius: 10px!important;
     border-color: rgb(122, 139, 156);
     border-width: 2px;
     border-style: solid;
-    min-height: 210px;
+    height: 100%;
     margin-top: 5px;
 }
 
-p {
-    text-align: justify;
+.tabla{
+    width: 100%;
 }
