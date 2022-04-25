@@ -28,3 +28,7 @@ p {
  .timeline-card-primary {
     border-left-color: #4A89DC;
  }
+
+ li {
+    list-style-type:none
+}

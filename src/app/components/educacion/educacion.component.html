@@ -3,29 +3,37 @@
     <div class="education-section">
       <h3 class="pt-3">Educación</h3>
       <div class="timeline">
+        <li class="listaCursos" *ngFor="let educacion of educacionList">
         <div class="timeline-card timeline-card-success card shadow-sm">
           <div class="card-body">
             <div class="row">
               <div class="col-3">
                 <img
-                  class="card-img-left"
-                  src="https://cms.fi.uba.ar/uploads/logo_FIUBA_color_2_eb5b4d0124.png"
-                  alt="logo FIUBA"
+                  class="card-img"
+                  [src]="educacion.img"
+                  alt={{educacion.altImg}}
                 />
               </div>
               <div class="col-9 d-flex">
                 <div class="row">
                   <div class="col-12">
-                    <div class="h5 mb-1">Ingeniería Industrial</div>
+                    <div class="h5 mb-1">{{educacion.carrera}}</div>
                   </div>
                   <div class="col-12">
                     <span class="text-muted h6">
-                      de la Universidad de Buenos Aires
+                      {{educacion.establecimiento}}
                     </span>
                   </div>
                   <div class="col-12">
                     <div class="text-muted text-small mt-2 mb-2">
-                      <time>2001 - 2011</time>
+                      <time>{{educacion.periodo}}</time>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <div class="text-muted text-small mt-2 mb-2">
+                      <ul *ngFor="let cursos of educacion.cursos">
+                        <li>{{cursos}}</li> 
+                      </ul>
                     </div>
                   </div>
                 </div>
@@ -33,32 +41,32 @@
             </div>
           </div>
         </div>
-        <div class="timeline-card timeline-card-success card shadow-sm">
+      </li>
+        <!-- <div class="timeline-card timeline-card-success card shadow-sm">
           <div class="card-body">
             <div class="row">
-              <div class="col-3">
+              <div class="col-4">
                 <img
-                  class="card-img-left"
-                  src="/assets/logoUNTREF.png"
-                  width="80%"
-                  height="80%"
+                  class="card-img d-block"
+                  [src]="miPortfolio.educacion[1].img"
+                  width="70px"
+                  height="70px"
                   alt="logo UNTREF"
                 />
               </div>
-              <div class="col-9 d-flex">
+              <div class="col-8 d-flex">
                 <div class="row">
                   <div class="col-12">
                     <div class="h5 mb-1">
-                      Especialización en Gestión de Empresas de Servicios de
-                      Agua y Saneamiento
+                      {{miPortfolio.educacion[1].carrera}}
                     </div>
                     <div class="col-12">
                       <span class="text-muted h6"
-                        >de la Universidad de Tres de Febrero</span>
+                        >{{miPortfolio.educacion[1].establecimiento}}</span>
                     </div>
                     <div class="col-12">
                         <div class="text-muted text-small mt-2 mb-2">
-                        <time>2015 - 2016</time>
+                        <time>{{miPortfolio.educacion[1].periodo}}</time>
                         </div>
                     </div>
                   </div>
@@ -70,28 +78,28 @@
         <div class="timeline-card timeline-card-success card shadow-sm">
             <div class="card-body">
                 <div class="row">
-                    <div class="col-3">
+                    <div class="col-4">
                         <img
-                            class="card-img-left"
-                            src="https://www.frba.utn.edu.ar/wp-content/uploads/2016/08/logo-utn.ba-horizontal-e1471367724904.jpg"
+                            class="card-img d-block"
+                            [src]="miPortfolio.educacion[2].img"
                             alt="logo UTN"
-                            width="75%"
-                            height="75%"
+                            width="70px"
+                            height="70px"
                         />
                     </div>
-                    <div class="col-9 d-flex">
+                    <div class="col-8 d-flex">
                         <div class="row">
                             <div class="col-12">
-                              <div class="h5 mb-1">Experto en Project Management</div>
+                              <div class="h5 mb-1">{{miPortfolio.educacion[2].carrera}}</div>
                             </div>
                             <div class="col-12">
                               <span class="text-muted h6">
-                                de la Universidad Tecnológica Nacional
+                                {{miPortfolio.educacion[2].establecimiento}}
                               </span>
                             </div>
                             <div class="col-12">
                               <div class="text-muted text-small mt-2 mb-2">
-                                <time>2013</time>
+                                <time>{{miPortfolio.educacion[2].periodo}}</time>
                               </div>
                             </div>
                           </div>
@@ -102,46 +110,46 @@
         <div class="timeline-card timeline-card-success card shadow-sm">
           <div class="card-body">
               <div class="row">
-                  <div class="col-3">
+                  <div class="col-4">
                       <img
-                          class="card-img-left"
-                          src="https://www.iram.org.ar/site/wp-content/themes/creativedog-timber-theme-v2/assets/images/logo-iram-mobile.svg"
+                          class="card-img d-block"
+                          [src]="miPortfolio.educacion[3].img"
                           alt="logo IRAM"
-                          width="50%"
-                          height="50%"
+                          width="70px"
+                          height="70px"
                       />
                   </div>
-                  <div class="col-9 d-flex">
+                  <div class="col-8 d-flex">
                       <div class="row">
                           <div class="col-12">
-                            <div class="h5 mb-1">Certificaciones</div>
+                            <div class="h5 mb-1">{{miPortfolio.educacion[3].carrera}}</div>
                           </div>
                           <div class="col-12">
                             <span class="text-muted h6">
-                              del Instituto Argentino de Normalización y Certificación
+                              {{miPortfolio.educacion[3].establecimiento}}
                             </span>
                           </div>
                           <div class="col-12">
                             <div class="text-muted text-small mt-2 mb-2">
                               <ul>
-                                <li>La Serie de Normas IRAM-ISO 9000</li> 
-                                <li>Taller de Indicadores de Gestión</li>
-                                <li>Taller de tratamiento de No Conformidades</li>
-                                <li>Transición a la nueva norma IRAM-ISO 9001:2015</li>
-                                <li>Planificación para la implementación de un Sistema de Gestión de la Calidad IRAM-ISO 9001:2015</li>
-                                <li>Contexto de la Organización</li>
-                                <li>Formación de Auditores Internos de SGC</li>
-                                <li>La Alta Dirección y los Sistemas de Gestión</li>
-                                <li>AMFE: Análisis de Modos de Fallas Potenciales y sus Efectos</li>
-                                <li>Taller avanzado de Tratamiento de No Conformidades</li>
-                                <li>Gestión de Riesgos y Oportunidades</li>
-                                <li>Gestión por Procesos</li>
-                                <li>Formación Avanzada de Auditores Internos</li>
+                                <li>{{miPortfolio.educacion[3].cursos[0]}}</li> 
+                                <li>{{miPortfolio.educacion[3].cursos[1]}}</li>
+                                <li>{{miPortfolio.educacion[3].cursos[2]}}</li>
+                                <li>{{miPortfolio.educacion[3].cursos[3]}}</li>
+                                <li>{{miPortfolio.educacion[3].cursos[4]}}</li>
+                                <li>{{miPortfolio.educacion[3].cursos[5]}}</li>
+                                <li>{{miPortfolio.educacion[3].cursos[6]}}</li>
+                                <li>{{miPortfolio.educacion[3].cursos[7]}}</li>
+                                <li>{{miPortfolio.educacion[3].cursos[8]}}</li>
+                                <li>{{miPortfolio.educacion[3].cursos[9]}}</li>
+                                <li>{{miPortfolio.educacion[3].cursos[10]}}</li>
+                                <li>{{miPortfolio.educacion[3].cursos[11]}}</li>
+                                <li>{{miPortfolio.educacion[3].cursos[12]}}</li>
                               </ul>
                             </div>
                           </div>
                         </div>
-                  </div>
+                  </div> -->
               </div>
           </div>
     </div>

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { PortfolioService } from 'src/app/servicios/portfolio.service';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-encabezado',
@@ -7,10 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EncabezadoComponent implements OnInit {
   title:string = 'PortfolioFPlos';
+  miPortfolio: any;
   
-  constructor() { }
+  constructor(private datosPortfolio:PortfolioService) { }
 
   ngOnInit(): void {
+    this.miPortfolio = {};
+    this.datosPortfolio.obtenerDatos().subscribe(datos =>{
+      this.miPortfolio = datos;
+    });
   }
 
 }

@@ -28,3 +28,7 @@ p {
  .timeline-card-success {
     border-left-color: #37BC9B;
  }
+
+.listaCursos{
+    list-style-type:none
+}

@@ -12,6 +12,8 @@ import { EducacionComponent } from './components/educacion/educacion.component';
 import { HabilidadesComponent } from './components/habilidades/habilidades.component';
 import { ProyectosComponent } from './components/proyectos/proyectos.component';
 import { PieDePaginaComponent } from './components/pie-de-pagina/pie-de-pagina.component';
+import { PortfolioService } from './servicios/portfolio.service';
+import { HttpClientModule}  from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,8 @@ import { PieDePaginaComponent } from './components/pie-de-pagina/pie-de-pagina.c
     PieDePaginaComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
