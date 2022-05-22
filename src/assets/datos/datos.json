@@ -74,7 +74,7 @@
         "periodo":"",
         "cursos":[
             "La Serie de Normas IRAM-ISO 9000",
-            "Taller de Indicadores de Gest",
+            "Taller de Indicadores de Gestion",
             "Taller de tratamiento de No Conformidades",
             "Transición a la nueva norma IRAM-ISO 9001:2015",
             "Planificación para la implementación de un Sistema de Gestión de la Calidad IRAM-ISO 9001:2015",
@@ -89,7 +89,7 @@
         ]
     }
     ],
-    "habilidades":[
+    "habilidadesTecnicas":[
     {
         "nombre":"HTML",
         "valor": "20"
@@ -105,9 +105,12 @@
     {
         "nombre":"SQL",
         "valor":"25"
-    },
+    }
+    ],
+
+    "habilidadesPersonales":[
     {
-        "nombre":"Flexibilida",
+        "nombre":"Flexibilidad",
         "valor":"80"
     },
     {
@@ -126,7 +129,7 @@
 
     "proyectos":{
         "nombre":"Mi primer Porfolio Web",
-        "descripcion": "2022 - Desarrollo de una aplicación web full stack para Argentina programa #YoProgramo, que muestre el propio portfolio web a traves de una aplicación de arquitectura distribuida."
+        "descripcion": "2022 - Desarrollo de una aplicación web full stack para Argentina programa #YoProgramo, que muestra el propio portfolio web a traves de una aplicación de arquitectura distribuida."
     }  
 }   
 

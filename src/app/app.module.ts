@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { AppComponent } from './app.component';
 import { EncabezadoComponent } from './components/encabezado/encabezado.component';
@@ -14,6 +15,11 @@ import { ProyectosComponent } from './components/proyectos/proyectos.component';
 import { PieDePaginaComponent } from './components/pie-de-pagina/pie-de-pagina.component';
 import { PortfolioService } from './servicios/portfolio.service';
 import { HttpClientModule}  from '@angular/common/http';
+import { IniciarSesionComponent } from './components/iniciar-sesion/iniciar-sesion.component';
+import { PortfolioComponent } from './components/portfolio/portfolio.component';
+import { AppRoutingModule } from './app-routing.module';
+import { ReactiveFormsModule } from '@angular/forms';
+import { BarraHabilidadesComponent } from './components/barra-habilidades/barra-habilidades.component';
 
 @NgModule({
   declarations: [
@@ -27,13 +33,20 @@ import { HttpClientModule}  from '@angular/common/http';
     EducacionComponent,
     HabilidadesComponent,
     ProyectosComponent,
-    PieDePaginaComponent
+    PieDePaginaComponent,
+    IniciarSesionComponent,
+    PortfolioComponent,
+    BarraHabilidadesComponent
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    AppRoutingModule,
+    ReactiveFormsModule,
+    NgbModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent, BarraHabilidadesComponent],
+  exports: [BarraHabilidadesComponent],
 })
 export class AppModule { }

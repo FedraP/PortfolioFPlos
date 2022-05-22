@@ -4,107 +4,27 @@
       <div class="skills-section">
       <div class="row">
         <div class="col-6">
-          <div class="mb-2">
-            <span>{{miPortfolio.habilidades[0].nombre}}</span>
-            <div class="progress my-1">
-              <div
-                class="progress-bar bg-primary" role="progressbar" data-aos="zoom-in-right" data-aos-delay="100"
-                data-aos-anchor=".skills-section"
-                [style.width.%]="miPortfolio.habilidades[0].valor"
-                aria-valuemin="0"
-                aria-valuemax="100"
-              ></div>
+          <li *ngFor="let habilidadT of habilidadesTecnicasList">
+            <div class="mb-2">
+            <span >{{habilidadT.nombre}}</span>
+            <div class="my-1">
+              <ngb-progressbar type="primary" [value]="habilidadT.valor"></ngb-progressbar>
+              </div>
             </div>
-          </div>
-          <div class="mb-2">
-            <span>CSS</span>
-            <div class="progress my-1">
-              <div
-                class="progress-bar bg-primary" role="progressbar" data-aos="zoom-in-right" data-aos-delay="200"
-                data-aos-anchor=".skills-section"
-                [style.width.%]="miPortfolio.habilidades[1].valor"
-                aria-valuemin="0"
-                aria-valuemax="100"
-              ></div>
-            </div>
-          </div>
-          <div class="mb-2">
-            <span>JavaScript</span>
-            <div class="progress my-1">
-              <div
-                class="progress-bar bg-primary" role="progressbar" data-aos="zoom-in-right" data-aos-delay="300"
-                data-aos-anchor=".skills-section"
-                [style.width.%]="miPortfolio.habilidades[2].valor"
-                aria-valuemin="0"
-                aria-valuemax="100"
-              ></div>
-            </div>
-          </div>
-          <div class="mb-2">
-            <span>SQL</span>
-            <div class="progress my-1">
-              <div
-                class="progress-bar bg-primary" role="progressbar" data-aos="zoom-in-right" data-aos-delay="400"
-                data-aos-anchor=".skills-section"
-                [style.width.%]="miPortfolio.habilidades[3].valor"
-                aria-valuemin="0"
-                aria-valuemax="100"
-              ></div>
-            </div>
-          </div>
+          </li>
         </div>
-        <div class="col-6">
+        <div class="col-6"> 
+          <li *ngFor="let habilidadP of habilidadesPersonalesList">
           <div class="mb-2">
-            <span>Flexibilidad</span>
-            <div class="progress my-1">
-              <div
-                class="progress-bar bg-success" role="progressbar" data-aos="zoom-in-right" data-aos-delay="500"
-                data-aos-anchor=".skills-section"
-                [style.width.%]="miPortfolio.habilidades[4].valor"
-                aria-valuemin="0"
-                aria-valuemax="100">
-              </div>
+            <span>{{habilidadP.nombre}}</span>
+            <div class=" my-1">
+              <ngb-progressbar type="success" [value]="habilidadP.valor"></ngb-progressbar>
+              </div> 
             </div>
-          </div>
-          <div class="mb-2">
-            <span>Trabajo en equipo</span>
-            <div class="progress my-1">
-              <div
-                class="progress-bar bg-success" role="progressbar" data-aos="zoom-in-right" data-aos-delay="600"
-                data-aos-anchor=".skills-section"
-                [style.width.%]="miPortfolio.habilidades[5].valor"
-                aria-valuemin="0"
-                aria-valuemax="100"
-              ></div>
-            </div>
-          </div>
-          <div class="mb-2">
-            <span>Proactividad</span>
-            <div class="progress my-1">
-              <div
-                class="progress-bar bg-success" role="progressbar" data-aos="zoom-in-right" data-aos-delay="700"
-                data-aos-anchor=".skills-section"
-                [style.width.%]="miPortfolio.habilidades[6].valor"
-                aria-valuemin="0"
-                aria-valuemax="100"
-              ></div>
-            </div>
-          </div>
-          <div class="mb-2">
-            <span>Empatia</span>
-            <div class="progress my-1">
-              <div
-                class="progress-bar bg-success" role="progressbar" data-aos="zoom-in-right" data-aos-delay="800"
-                data-aos-anchor=".skills-section"
-                [style.width.%]="miPortfolio.habilidades[7].valor"
-                aria-valuemin="0"
-                aria-valuemax="100">
-              </div>
-            </div>
-          </div>
+          </li>
         </div>
       </div>
     </div>
-  </div>
+  </div> 
 </div>
-
+          

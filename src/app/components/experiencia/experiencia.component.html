@@ -4,7 +4,6 @@
       <h3 class="pt-3">Experiencia Laboral</h3>
       <div class="timeline">
         <li *ngFor="let experiencia of experienciaList">
-          <!-- {{experiencia | json}} -->
           <div class="timeline-card timeline-card-primary card shadow-sm">
             <div class="card-body">
               <div class="row">
@@ -33,13 +32,6 @@
                     <p *ngFor="let descripcion of experiencia.descripcion">
                       {{descripcion}}
                       <br />
-                      <!-- {{ miPortfolio.experienciaLaboral[0].descripcion[1]
-                      }}<br />
-                      {{ miPortfolio.experienciaLaboral[0].descripcion[2]
-                      }}<br />
-                      {{ miPortfolio.experienciaLaboral[0].descripcion[3]
-                      }}<br />
-                      {{ miPortfolio.experienciaLaboral[0].descripcion[4] }} -->
                     </p>
                   </div>
                 </div>
@@ -47,34 +39,6 @@
             </div>
           </div>
         </li>
-        <!-- <div class="timeline-card timeline-card-primary card shadow-sm">
-            <div class="card-body">
-                <div class="row">
-                    <div class="col-3">
-                    <img
-                      class="card-img-left"
-                      [src]="miPortfolio.experienciaLaboral[1].img"
-                      alt="logo AySA"
-                    />
-                    </div>
-                    <div class="col-9 d-flex">
-                        <div class="row">
-                            <div class="col-12">
-                                <div class="h5 mb-1">{{miPortfolio.experienciaLaboral[1].puesto}}</div>
-                            <div class="col-12">
-                                <span class="text-muted h6">{{miPortfolio.experienciaLaboral[1].empresa}}</span>
-                            </div>
-                            <div class="col-12"></div>
-                                <div class="text-muted text-small mt-2 mb-2">
-                                <time>{{miPortfolio.experienciaLaboral[1].periodo}}</time>
-                                </div>
-                            </div>
-              <p>
-                {{miPortfolio.experienciaLaboral[1].descripcion[0]}} <br />
-                {{miPortfolio.experienciaLaboral[1].descripcion[1]}}<br />
-                {{miPortfolio.experienciaLaboral[1].descripcion[2]}}<br />
-                {{miPortfolio.experienciaLaboral[1].descripcion[3]}}
-              </p> -->
       </div>
     </div>
   </div>
