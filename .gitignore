@@ -31,7 +31,7 @@ FrontEnd/!.vscode/extensions.json
 FrontEnd/.history/*
 
 # misc
-FontEnd/.angular
+FrontEnd/.angular
 /.sass-cache
 /connect.lock
 /coverage
