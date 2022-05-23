@@ -31,7 +31,7 @@ FrontEnd/!.vscode/extensions.json
 FrontEnd/.history/*
 
 # misc
-FontEnd/.angular/cache
+FontEnd/.angular
 /.sass-cache
 /connect.lock
 /coverage
@@ -44,3 +44,39 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+
+
+# BackEnd
+BackEnd/HELP.md
+BackEnd/target/
+BackEnd/!.mvn/wrapper/maven-wrapper.jar
+BackEnd/!**/src/main/**/target/
+BackEnd/!**/src/test/**/target/
+
+### STS ###
+BackEnd/.apt_generated
+BackEnd/.classpath
+BackEnd/.factorypath
+BackEnd/.project
+BackEnd/.settings
+BackEnd/.springBeans
+BackEnd/.sts4-cache
+
+### IntelliJ IDEA ###
+BackEnd/.idea
+BackEnd/*.iws
+BackEnd/*.iml
+BackEnd/*.ipr
+
+### NetBeans ###
+BackEnd/nbproject/private/
+BackEnd/nbbuild/
+BackEnd/dist/
+BackEnd/nbdist/
+BackEnd/.nb-gradle/
+BackEnd/build/
+BackEnd/!**/src/main/**/build/
+BackEnd/!**/src/test/**/build/
+
+### VS Code ###
+BackEnd/.vscode/
