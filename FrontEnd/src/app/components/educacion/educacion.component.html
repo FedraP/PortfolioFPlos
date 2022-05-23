@@ -1,0 +1,48 @@
+<div class="contenedorEducacion container">
+  <div class="row my-auto px-4 d-flex">
+    <div class="education-section">
+      <h3 class="pt-3">Educación</h3>
+      <div class="timeline">
+        <li class="listaCursos" *ngFor="let educacion of educacionList">
+        <div class="timeline-card timeline-card-success card shadow-sm">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-3">
+                <img
+                  class="card-img"
+                  [src]="educacion.img"
+                  alt={{educacion.altImg}}
+                />
+              </div>
+              <div class="col-9 d-flex">
+                <div class="row">
+                  <div class="col-12">
+                    <div class="h5 mb-1">{{educacion.carrera}}</div>
+                  </div>
+                  <div class="col-12">
+                    <span class="text-muted h6">
+                      {{educacion.establecimiento}}
+                    </span>
+                  </div>
+                  <div class="col-12">
+                    <div class="text-muted text-small mt-2 mb-2">
+                      <time>{{educacion.periodo}}</time>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <div class="text-muted text-small mt-2 mb-2">
+                      <ul *ngFor="let cursos of educacion.cursos">
+                        <li>{{cursos}}</li> 
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+      </div>
+    </div>
+  </div>
+</div>

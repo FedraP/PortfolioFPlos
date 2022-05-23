@@ -1,0 +1,34 @@
+.contenedorExperiencia {
+    background-color:transparent;
+    display: flex;
+    border-radius: 10px!important;
+    border-color: rgb(122, 139, 156);
+    border-width: 2px;
+    border-style: solid;
+    height: 100%;
+    margin-top: 5px;
+}
+
+p {
+    text-align: justify;
+}
+
+.timeline {
+    border-left: 2px solid #E6E9ED;
+    padding: 1rem 0; 
+}
+
+.timeline-card {
+    position: relative;
+    margin-left: 33px;
+    border-left: 2px solid;
+    margin-bottom: 2rem;
+ }
+
+ .timeline-card-primary {
+    border-left-color: #4A89DC;
+ }
+
+ li {
+    list-style-type:none
+}

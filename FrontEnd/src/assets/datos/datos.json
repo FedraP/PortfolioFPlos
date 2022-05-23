@@ -1,0 +1,136 @@
+{
+    "nombre": "Fedra Plos",
+    "fondo": "/assets/Fondo2.jpg",
+    "avatar": "/assets/Foto.jpg",
+    "titulo": "Ingeniera Industrial & Full Stack Developer Jr",
+    "presentacion": "Hola, soy Fedra Plos, una persona con ganas de trabajar, proactiva, responsable, flexible, orientada al logro de resultados.",
+    "email": "fedra.plos@gmail.com",
+    "direccion": "Carabelas N 2156, Avellaneda, Buenos Aires",
+    "telefono": "+54 9 11 5927 6353",
+    "acercaDe":[
+                "Soy ingeniera Industrial recibida de la Universidad de Buenos Aires. Viví en Santa Teresita, Partido de la Costa hasta los 18 años cuando me mudé a Buenos Aires para estudiar y mi deseo es volver a radicarme en la Costa Atlántica.",
+                "Una parte de mi experiencia se desarrolló en procesos productivos, el aseguramiento de la calidad y el seguimiento de proyectos dentro de la industria automotriz.",
+                "Actualmente me encuentro ejerciendo las tareas de construcción y seguimiento de tableros de control, coordinación general de proyectos e implementación de la norma de calidad ISO 9001:2015, como Jefa del Departamento de Calidad e Información dentro de la Dirección de Planificación Técnica de la empresa AySA S.A.",
+                "En 2022 obtuve mi certificación como Full Stack Developer Jr con el programa #YoProgramo de Argentina Programa."
+    ],
+
+    "experienciaLaboral": [{
+        "img": "https://www.aysa.com.ar/media-library/imagenes_inicio/logo.png",
+        "altImg":"logo AySA",
+        "puesto": "Jefa del Departamento de Calidad e Información",
+        "empresa":"en Agua y Saneamientos Argentinos SA",
+        "periodo": "Octubre 2017 - Actualidad",
+        "descripcion":[
+                "Responsable de implementación, certificación y mantenimiento del Sistema de Gestión de la Calidad bajo la Norma ISO 9001:2015.",
+                "Coordinación y seguimiento del Comité de Calidad; administración del sistema informático Loyal para la elaboración, publicación, control y gestión de los documentos del Sistema.",
+                "Confección y seguimiento de Tableros de Control e Indicadores, elaboración de informes de estado de situación para la Dirección General.",
+                "Coordinación general del Programa de Proyectos de la Dirección.",
+                "Gestión y control del almacenamiento de la información de los proyectos según los lineamientos de la dirección en las herramientas disponibles."
+        ] 
+    },
+       {
+        "img":"https://www.aysa.com.ar/media-library/imagenes_inicio/logo.png",
+        "altImg":"logo AySA",
+        "puesto":"Coordinadora de Gestión de Proyectos y Aseguramiento de la Calidad",
+        "empresa":"en Agua y Saneamientos Argentinos SA",
+        "periodo":"Febrero 2012 - Octubre 2017",
+        "descripcion": [
+            "Integrante del equipo responsable de la implementación y certificación de la Norma de Sistemas de Gestión de la Calidad ISO 9001:2008",
+            "Seguimiento del Programa de Proyectos de la Dirección, Tableros de Control e Indicadores.",
+            "Creación y administración de cronogramas de proyectos utilizando la herramienta MSProject.",
+            "Gestión y control del almacenamiento de la información de los proyectos y los documentos del sistema de gestión según los lineamientos de la dirección en las herramientas disponibles."
+        ]
+    }
+    ],
+    "educacion": [{
+        "img":"https://cms.fi.uba.ar/uploads/logo_FIUBA_color_2_eb5b4d0124.png",
+        "altImg":"logo FIUBA",
+        "carrera":"Ingeniería Industrial",
+        "establecimiento": "de la Universidad de Buenos Aires",
+        "periodo":"2001 - 2011",
+        "cursos":[]
+    },
+    {
+        "img":"/assets/logoUNTREF.png",
+        "altImg":"logo UNTREF",
+        "carrera":"Especialización en Gestión de Empresas de Servicios de Agua y Saneamiento",
+        "establecimiento":"de la Universidad de Tres de Febrero",
+        "periodo":"2015 - 2016",
+        "cursos":[]
+    },
+    {
+        "img":"https://www.frba.utn.edu.ar/wp-content/uploads/2016/08/logo-utn.ba-horizontal-e1471367724904.jpg",
+        "altImg":"logo UTN",
+        "carrera": "Experto en Project Management",
+        "establecimiento":"de la Universidad Tecnológica Nacional",
+        "periodo":"2013",
+        "cursos":[]
+    },
+    {
+        "img":"https://www.iram.org.ar/site/wp-content/themes/creativedog-timber-theme-v2/assets/images/logo-iram-mobile.svg",
+        "altImg":"logo IRAM",
+        "carrera":"Certificaciones",
+        "establecimiento":"del Instituto Argentino de Normalización y Certificación",
+        "periodo":"",
+        "cursos":[
+            "La Serie de Normas IRAM-ISO 9000",
+            "Taller de Indicadores de Gestion",
+            "Taller de tratamiento de No Conformidades",
+            "Transición a la nueva norma IRAM-ISO 9001:2015",
+            "Planificación para la implementación de un Sistema de Gestión de la Calidad IRAM-ISO 9001:2015",
+            "Contexto de la Organización",
+            "Formación de Auditores Internos de SGC",
+            "La Alta Dirección y los Sistemas de Gestión",
+            "AMFE: Análisis de Modos de Fallas Potenciales y sus Efectos",
+            "Taller avanzado de Tratamiento de No Conformidades",
+            "Gestión de Riesgos y Oportunidades",
+            "Gestión por Procesos",
+            "Formación Avanzada de Auditores Internos"
+        ]
+    }
+    ],
+    "habilidadesTecnicas":[
+    {
+        "nombre":"HTML",
+        "valor": "20"
+    },
+    {
+        "nombre":"CSS",
+        "valor":"5"
+    },
+    {
+        "nombre":"JavaScript",
+        "valor":"10"
+    },
+    {
+        "nombre":"SQL",
+        "valor":"25"
+    }
+    ],
+
+    "habilidadesPersonales":[
+    {
+        "nombre":"Flexibilidad",
+        "valor":"80"
+    },
+    {
+        "nombre":"Trabajo en equipo",
+        "valor":"90"
+    },
+    {
+        "nombre":"Proactividad",
+        "valor":"98"
+    },
+    {
+        "nombre":"Empatia",
+        "valor":"95"
+    }
+        ],
+
+    "proyectos":{
+        "nombre":"Mi primer Porfolio Web",
+        "descripcion": "2022 - Desarrollo de una aplicación web full stack para Argentina programa #YoProgramo, que muestra el propio portfolio web a traves de una aplicación de arquitectura distribuida."
+    }  
+}   
+
+

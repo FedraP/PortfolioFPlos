@@ -1,0 +1,18 @@
+.contenedorHabilidades {
+    background-color:transparent;
+    display: flex;
+    border-radius: 10px!important;
+    border-color: rgb(122, 139, 156);
+    border-width: 2px;
+    border-style: solid;
+    height: 100%;
+    margin-top: 5px;
+}
+
+.tabla{
+    width: 100%;
+}
+
+li {
+    list-style-type:none
+}
