@@ -10,8 +10,8 @@
               <div class="col-3">
                 <img
                   class="card-img"
-                  [src]="educacion.img"
-                  alt={{educacion.altImg}}
+                  [src]="educacion.urlLogoInst"
+                  alt={{educacion.altImgInst}}
                 />
               </div>
               <div class="col-9 d-flex">
@@ -21,7 +21,7 @@
                   </div>
                   <div class="col-12">
                     <span class="text-muted h6">
-                      {{educacion.establecimiento}}
+                      {{educacion.institucion}}
                     </span>
                   </div>
                   <div class="col-12">
@@ -29,13 +29,15 @@
                       <time>{{educacion.periodo}}</time>
                     </div>
                   </div>
+                  
                   <div class="col-12">
                     <div class="text-muted text-small mt-2 mb-2">
-                      <ul *ngFor="let cursos of educacion.cursos">
-                        <li>{{cursos}}</li> 
-                      </ul>
+                      <!-- <ul *ngFor="let cursos of cursosList"> -->
+                        <!-- <li>{{educacion.cursos}}</li>  -->
+                      <!-- </ul> -->
+                      <p *ngIf="educacion?.cursos"><app-cursos></app-cursos></p>
                     </div>
-                  </div>
+                  </div> 
                 </div>
               </div>
             </div>

@@ -2,13 +2,10 @@
     <div class="row my-auto px-4 d-flex">
         <h3 class="pt-3">Acerca de mi</h3>
         <p>
-        {{miPortfolio?.acercaDe[0]}}
-        <br>
-        {{miPortfolio?.acercaDe[1]}}
-        <br>
-        {{miPortfolio?.acercaDe[2]}}
-        <br>
-        {{miPortfolio?.acercaDe[3]}}
+            <li *ngFor="let acercaDe of acerca_DeList">
+                {{acercaDe}}
+                <br>
+            </li>    
         </p>
     </div>
 </div>

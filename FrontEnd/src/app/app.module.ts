@@ -20,6 +20,10 @@ import { PortfolioComponent } from './components/portfolio/portfolio.component';
 import { AppRoutingModule } from './app-routing.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import { BarraHabilidadesComponent } from './components/barra-habilidades/barra-habilidades.component';
+import { PersonaService } from './servicios/persona.service';
+import { EducacionService} from './servicios/educacion.service';
+import { ExperienciaService} from './servicios/experiencia.service';
+import { CursosComponent } from './components/cursos/cursos.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +40,8 @@ import { BarraHabilidadesComponent } from './components/barra-habilidades/barra-
     PieDePaginaComponent,
     IniciarSesionComponent,
     PortfolioComponent,
-    BarraHabilidadesComponent
+    BarraHabilidadesComponent,
+    CursosComponent
   ],
   imports: [
     BrowserModule,
@@ -45,7 +50,7 @@ import { BarraHabilidadesComponent } from './components/barra-habilidades/barra-
     ReactiveFormsModule,
     NgbModule
   ],
-  providers: [],
+  providers: [PersonaService, EducacionService, ExperienciaService],
   bootstrap: [AppComponent, BarraHabilidadesComponent],
   exports: [BarraHabilidadesComponent],
 })
