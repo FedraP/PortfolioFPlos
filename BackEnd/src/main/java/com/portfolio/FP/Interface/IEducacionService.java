@@ -10,6 +10,7 @@ public interface IEducacionService {
     //Traer una lista de educacion
     public List <Educacion> verEducacion ();
     
+    
     //Crear un objeto de tipo educacion
     public void crearEducacion (Educacion edu);
     

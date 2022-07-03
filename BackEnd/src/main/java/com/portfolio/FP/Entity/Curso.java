@@ -9,7 +9,10 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import lombok.Getter;
+import lombok.Setter;
 
+@Getter @Setter
 @Entity
 public class Curso {
     
@@ -17,9 +20,14 @@ public class Curso {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long idCurso;
     private String curso;
-    
 
-    public Curso(Long idCurso, String curso, List<Establecimiento_educativo> establecimientoEduList) {
+    public Curso() {
+    }
+    
+    @ManyToOne
+    private Educacion educacion;
+
+    public Curso(Long idCurso, String curso) {
         this.idCurso = idCurso;
         this.curso = curso;
         

@@ -23,13 +23,17 @@ import lombok.Setter;
     private String url_logoEstablecimiento;
     private String alt_logoEstablecimiento;
     
-    @OneToMany (fetch = FetchType.LAZY, mappedBy = "idEdu")
-    private List<Educacion> educacionList;
+    //@OneToMany (fetch = FetchType.LAZY, mappedBy = "idEdu")
+    //private List<Educacion> educacionList;
     
-    @OneToMany (fetch = FetchType.LAZY, mappedBy = "idCurso")
+    @OneToMany (mappedBy = "idCurso",fetch = FetchType.LAZY )
     private List<Curso> cursosList;
 
-    public Establecimiento_educativo(Long idEstEdu, String establecimientoEdu, String url_logoEstablecimiento, String alt_logoEstablecimiento, List<Curso> cursosList) {
+    public Establecimiento_educativo() {
+    }
+    
+
+    public Establecimiento_educativo(Long idEstEdu, String establecimientoEdu, String url_logoEstablecimiento, String alt_logoEstablecimiento) {
         this.idEstEdu = idEstEdu;
         this.establecimientoEdu = establecimientoEdu;
         this.url_logoEstablecimiento = url_logoEstablecimiento;

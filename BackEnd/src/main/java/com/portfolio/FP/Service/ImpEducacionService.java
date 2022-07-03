@@ -7,18 +7,25 @@ import com.portfolio.FP.Repository.IEducacionRepository;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 @Service
+@Transactional
 public class ImpEducacionService implements IEducacionService{
     
+     private final IEducacionRepository iEduRepo;
+     
     @Autowired
-    public IEducacionRepository iEduRepo;
+     public ImpEducacionService(IEducacionRepository iEduRepo) {
+        this.iEduRepo = iEduRepo;
+    }
     
     @Override
-    public List<Educacion> verEducacion() {
-    List<Educacion> eduList = iEduRepo.findAll();
+    public List <Educacion> verEducacion() {
+    List <Educacion> eduList = iEduRepo.findAll();
         return eduList;
     }
+    
 
     @Override
     public void crearEducacion(Educacion edu) {

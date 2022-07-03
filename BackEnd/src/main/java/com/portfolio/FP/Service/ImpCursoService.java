@@ -11,12 +11,16 @@ import org.springframework.stereotype.Service;
 @Service
 public class ImpCursoService implements ICursoService{
     
+    private final ICursoRepository iCursoRepo;
+    
     @Autowired
-    public ICursoRepository iCursoRepo;
+    public ImpCursoService(ICursoRepository iCursoRepo) {
+        this.iCursoRepo = iCursoRepo;
+    }
     
     @Override
-    public List<Curso> verCurso() {
-    List<Curso> cursosList = iCursoRepo.findAll();
+    public List <Curso> verCurso() {
+    List <Curso> cursosList = iCursoRepo.findAll();
         return cursosList;
     }
 

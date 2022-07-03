@@ -1,6 +1,7 @@
 
 package com.portfolio.FP.Entity;
 
+import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
 import javax.persistence.Entity;
@@ -16,7 +17,7 @@ import lombok.Setter;
 
 @Getter @Setter
 @Entity
-public class Persona {
+public class Persona implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long idPer;
@@ -46,9 +47,11 @@ public class Persona {
     public Persona() {
     }
     
-    //@OneToMany (fetch = FetchType.LAZY, mappedBy = "idEdu")
+    //@OneToMany (mappedBy = "idEdu", fetch = FetchType.LAZY)
    // private List<Educacion> educacionList;
-
+    //@OneToMany (mappedBy = "idExpe",fetch = FetchType.LAZY)
+    //private List<ExperienciaLaboral> experiencianList;
+    
     public Persona(Long idPer, String nombre, String apellido, String direccion, String telefono, Date fechaNac, String email,
                     String presentacion, String acercaDe, String urlAvatar, String urlFondo, String titulo) {
         this.idPer = idPer;

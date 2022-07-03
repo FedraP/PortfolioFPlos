@@ -5,6 +5,7 @@ import com.portfolio.FP.Entity.Curso;
 import com.portfolio.FP.Interface.ICursoService;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -15,37 +16,45 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
+@CrossOrigin (origins = "http://localhost:4200")
+
 public class CursoController {
+    
+    private final ICursoService iCursoServ;
+    
     @Autowired
-    private ICursoService iCursoServ;
+    
+    public CursoController(ICursoService iCursoServ) {
+        this.iCursoServ = iCursoServ;
+    }
      
-    @GetMapping ("/ver/curso")
+    @GetMapping ("/curso/ver")
     @ResponseBody
-    public List <Curso> verECurso(){
+    public List <Curso> verCurso(){
         return iCursoServ.verCurso();
     }
     
-    @GetMapping ("/ver/curso/{id}")
+    @GetMapping ("/curso/ver/{id}")
     @ResponseBody
     public void buscarCurso(@PathVariable Long id){
         iCursoServ.buscarCurso(id);
     }        
 
     
-    @PostMapping ("/crear/curso")
+    @PostMapping ("/curso/crear")
     public String crearCurso (@RequestBody Curso curso){
         iCursoServ.crearCurso (curso);
         return "El cursoo fue creado correctamente";
     }
     
-    @DeleteMapping ("/borrar/curso/{id}")
+    @DeleteMapping ("/curso/borrar/{id}")
     
     public String borrarCurso(@PathVariable Long idCurso){
         iCursoServ.borrarCurso(idCurso);
         return "El ecurso fue eliminado correctamente";
     }
     
-    @PutMapping ("/editar/curso/{id}")
+    @PutMapping ("/curso/editar/{id}")
     
     public void editarCurso (@RequestBody Curso curso){
         iCursoServ.editarCurso(curso);

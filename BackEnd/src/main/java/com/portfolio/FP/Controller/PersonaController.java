@@ -6,6 +6,7 @@ import com.portfolio.FP.Interface.IPersonaService;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -19,6 +20,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 
 @RestController
+@CrossOrigin (origins = "http://localhost:4200")
 public class PersonaController {
     
     private final IPersonaService iPersoServ;
@@ -28,33 +30,38 @@ public class PersonaController {
         this.iPersoServ = iPersoServ;
     }
     
-    @GetMapping ("/ver/personas")
+    @GetMapping ("/persona/ver")
     @ResponseBody
     public List <Persona> verPersonas(){
         return iPersoServ.verPersonas();
     }
     
-    @GetMapping ("/ver/persona/{id}")
+    @GetMapping ("/persona/ver/{id}")
     @ResponseBody
     public Persona buscarPersona(@PathVariable Long id){
         return iPersoServ.buscarPersona(id);
         
     }
     
-    @PostMapping ("/crear/persona")
+    @GetMapping ("/persona/ver/perfil")
+     public Persona buscarPersona(){
+        return iPersoServ.buscarPersona((long)1);
+     }
+    
+    @PostMapping ("/persona/crear")
     public String crearPersona (@RequestBody Persona perso){
         iPersoServ.crearPersona(perso);
         return "La persona fue creada correctamente";
     }
     
-    @DeleteMapping ("/borrar/persona/{id}")
+    @DeleteMapping ("/persona/borrar/{id}")
     
     public String borrarPersona(@PathVariable Long id){
         iPersoServ.borrarPersona(id);
         return "La persona fue eliminada correctamente";
     }
     
-    @PutMapping ("/editar/persona/{id}")
+    @PutMapping ("/persona/editar/{id}")
     
     public String editarPersona (@RequestBody Persona perso){
         iPersoServ.editarPersona(perso);
