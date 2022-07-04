@@ -6,12 +6,15 @@
             <div class="main-timeline">
                 <a href="#" class="timeline">
                     <div class="timeline-icon"><i class="fa-solid fa-globe"></i></div>
+                    <li *ngFor="let proyecto of proyectosList">
                     <div class="timeline-content">
-                        <h3 class="title">{{miPortfolio.proyectos.nombre}}</h3>
+                        <h3 class="title">{{proyecto.nombre}}</h3>
                         <p class="description ">
-                            2022 - Desarrollo de una aplicación web full stack para Argentina programa #YoProgramo, que muestre el propio portfolio web a traves de una aplicación de arquitectura distribuida.
+                            {{proyecto.descripcion}}
+                            <!-- 2022 - Desarrollo de una aplicación web full stack para Argentina programa #YoProgramo, que muestre el propio portfolio web a traves de una aplicación de arquitectura distribuida. -->
                         </p>
                     </div>
+                </li>
                 </a>
             </div>
         </div>

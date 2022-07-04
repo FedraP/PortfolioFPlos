@@ -18,8 +18,6 @@ export class HabilidadesComponent implements OnInit {
 
   miPortfolio: any;
   habilidadesList: any;
-  habilidadesTList: any;
-  habilidadesPList: any;
 
   constructor(private datosHabilidad: HabilidadesService) {
     
@@ -29,8 +27,6 @@ export class HabilidadesComponent implements OnInit {
 
     this.datosHabilidad.traerHabilidades().subscribe(datos =>{
       this.habilidadesList = datos;
-      // this.habilidadesTecnicasList = datos.habilidadesTecnicas;
-      // this.habilidadesPersonalesList = datos.habilidadesPersonales;
       console.log(datos);
     });
    
