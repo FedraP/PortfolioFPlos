@@ -10,8 +10,8 @@
               <div class="col-3">
                 <img
                   class="card-img"
-                  [src]="educacion.urlLogoInst"
-                  alt={{educacion.altImgInst}}
+                  [src]="educacion.estaEdu.url_logoEstablecimiento"
+                  alt={{educacion.estaEdu.alt_logoEstablecimiento}}
                 />
               </div>
               <div class="col-9 d-flex">
@@ -21,7 +21,8 @@
                   </div>
                   <div class="col-12">
                     <span class="text-muted h6">
-                      {{educacion.institucion}}
+                      {{educacion.estaEdu.establecimientoEdu}}
+                      <!-- {{educacion.institucion}} -->
                     </span>
                   </div>
                   <div class="col-12">

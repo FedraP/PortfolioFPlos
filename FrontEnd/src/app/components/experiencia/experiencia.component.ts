@@ -24,10 +24,6 @@ export class ExperienciaComponent implements OnInit {
     this.datosExperiencia.getExperiencia().subscribe(datos =>{
       this.experiencia = datos;
       this.experienciaList = datos;
-      console.log(datos);
-    //  this.descripcionList = datos.descripcion.split("\n");
-    //  console.log(this.descripcionList);
-
     });
   }
 }

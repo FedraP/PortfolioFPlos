@@ -7,6 +7,7 @@ import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import lombok.Getter;
 import lombok.Setter;
@@ -25,9 +26,11 @@ import lombok.Setter;
     
     //@OneToMany (fetch = FetchType.LAZY, mappedBy = "idEdu")
     //private List<Educacion> educacionList;
+    //@ManyToOne
+    //private Educacion educacion;
     
-    @OneToMany (mappedBy = "idCurso",fetch = FetchType.LAZY )
-    private List<Curso> cursosList;
+    //@OneToMany (mappedBy = "idCurso",fetch = FetchType.LAZY )
+    //private List<Curso> cursosList;
 
     public Establecimiento_educativo() {
     }

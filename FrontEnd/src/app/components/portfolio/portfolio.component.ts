@@ -17,7 +17,7 @@ export class PortfolioComponent implements OnInit {
   ngOnInit(): void {
     this.datosPersona.getPersona().subscribe(datos =>{
     this.persona = datos;
-    console.log(datos)})
+    })
   };
     
   // constructor() { }

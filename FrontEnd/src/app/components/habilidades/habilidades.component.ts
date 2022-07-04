@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { PortfolioService } from 'src/app/servicios/portfolio.service';
 import { Subscription } from 'rxjs';
+import { habilidades } from 'src/app/model/habilidades.model';
+import { HabilidadesService } from 'src/app/servicios/habilidades.service';
 
 
 
@@ -11,20 +13,25 @@ import { Subscription } from 'rxjs';
 })
 
 export class HabilidadesComponent implements OnInit {
-  miPortfolio: any;
-  habilidadesTecnicasList: any;
-  habilidadesPersonalesList: any;
 
-  constructor(private datosPortfolio: PortfolioService) {
+  habilidad: habilidades = new habilidades ("",0, "");
+
+  miPortfolio: any;
+  habilidadesList: any;
+  habilidadesTList: any;
+  habilidadesPList: any;
+
+  constructor(private datosHabilidad: HabilidadesService) {
     
    }
 
   ngOnInit(): void {
-    this.miPortfolio = {};
-    this.datosPortfolio.obtenerDatos().subscribe(datos =>{
-      this.habilidadesTecnicasList = datos.habilidadesTecnicas;
-      this.habilidadesPersonalesList = datos.habilidadesPersonales;
-      
+
+    this.datosHabilidad.traerHabilidades().subscribe(datos =>{
+      this.habilidadesList = datos;
+      // this.habilidadesTecnicasList = datos.habilidadesTecnicas;
+      // this.habilidadesPersonalesList = datos.habilidadesPersonales;
+      console.log(datos);
     });
    
   }

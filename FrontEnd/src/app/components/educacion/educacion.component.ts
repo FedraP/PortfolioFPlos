@@ -27,7 +27,6 @@ export class EducacionComponent implements OnInit {
     this.datosEducacion.traerEducacion().subscribe(datos =>{
       this.educacion = datos;
       this.educacionList = datos;
-      console.log(datos);
 
     });
 

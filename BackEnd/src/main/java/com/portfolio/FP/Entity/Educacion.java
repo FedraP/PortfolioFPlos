@@ -27,6 +27,9 @@ public class Educacion {
     
     @ManyToOne
     private Persona persona;
+    
+    @ManyToOne
+    private Establecimiento_educativo estaEdu;
 
     public Educacion() {
     }
