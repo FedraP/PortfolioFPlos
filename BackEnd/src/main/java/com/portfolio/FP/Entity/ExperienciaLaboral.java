@@ -18,10 +18,7 @@ public class ExperienciaLaboral {
     
     private Long idExpe;
     
-    private String img;
-    private String altImg;
     private String puesto;
-    private String empresa;
     private String periodo;
     private String descripcion;
     
@@ -31,12 +28,12 @@ public class ExperienciaLaboral {
     @ManyToOne
     private Persona persona;
     
-    public ExperienciaLaboral(Long idExpe, String img, String altImg, String puesto, String empresa, String periodo, String descripcion) {
+    @ManyToOne
+    private Empresa empre;
+    
+    public ExperienciaLaboral(Long idExpe, String puesto, String periodo, String descripcion) {
         this.idExpe = idExpe;
-        this.img = img;
-        this.altImg = altImg;
         this.puesto = puesto;
-        this.empresa = empresa;
         this.periodo = periodo;
         this.descripcion = descripcion;
     }

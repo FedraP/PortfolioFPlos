@@ -20,10 +20,8 @@ public class Educacion {
     
     private String carrera;
     private String periodo;
-    private String institucion;
     private String cursos;
-    private String urlLogoInst;
-    private String altImgInst;
+   
     
     @ManyToOne
     private Persona persona;
@@ -34,14 +32,11 @@ public class Educacion {
     public Educacion() {
     }
 
-    public Educacion(Long idEdu, String carrera, String periodo, String institucion, String cursos, String urlLogoInst, String altImgInst) {
+    public Educacion(Long idEdu, String carrera, String periodo, String cursos) {
         this.idEdu = idEdu;
         this.carrera = carrera;
         this.periodo = periodo;
-        this.institucion = institucion;
         this.cursos = cursos;
-        this.urlLogoInst = urlLogoInst;
-        this.altImgInst = altImgInst;
     }
 
 }
