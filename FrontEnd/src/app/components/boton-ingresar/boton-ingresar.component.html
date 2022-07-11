@@ -1,1 +1,2 @@
-<button type="button" class="btn btn-primary-outline">Ingresar</button>
+<button type="button" class="btn btn-primary-outline" routerLink = '/iniciar-sesion' *ngIf = "!isLogged">Ingresar</button>
+<button type="button" class="btn btn-primary-outline" (click)="onLogOut()" *ngIf="isLogged">Salir</button>

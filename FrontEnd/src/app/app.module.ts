@@ -19,11 +19,11 @@ import { IniciarSesionComponent } from './components/iniciar-sesion/iniciar-sesi
 import { PortfolioComponent } from './components/portfolio/portfolio.component';
 import { AppRoutingModule } from './app-routing.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { BarraHabilidadesComponent } from './components/barra-habilidades/barra-habilidades.component';
 import { PersonaService } from './servicios/persona.service';
 import { EducacionService} from './servicios/educacion.service';
 import { ExperienciaService} from './servicios/experiencia.service';
 import { CursosComponent } from './components/cursos/cursos.component';
+import { interceptorProvider } from './servicios/interceptor.service';
 
 @NgModule({
   declarations: [
@@ -40,7 +40,6 @@ import { CursosComponent } from './components/cursos/cursos.component';
     PieDePaginaComponent,
     IniciarSesionComponent,
     PortfolioComponent,
-    BarraHabilidadesComponent,
     CursosComponent
   ],
   imports: [
@@ -51,8 +50,8 @@ import { CursosComponent } from './components/cursos/cursos.component';
     NgbModule,
     FormsModule
   ],
-  providers: [PersonaService, EducacionService, ExperienciaService],
-  bootstrap: [AppComponent, BarraHabilidadesComponent],
-  exports: [BarraHabilidadesComponent],
+  providers: [PersonaService, EducacionService, ExperienciaService, interceptorProvider],
+  bootstrap: [AppComponent],
+  exports: [],
 })
 export class AppModule { }
