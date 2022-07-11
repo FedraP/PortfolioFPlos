@@ -18,7 +18,7 @@ import { HttpClientModule}  from '@angular/common/http';
 import { IniciarSesionComponent } from './components/iniciar-sesion/iniciar-sesion.component';
 import { PortfolioComponent } from './components/portfolio/portfolio.component';
 import { AppRoutingModule } from './app-routing.module';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BarraHabilidadesComponent } from './components/barra-habilidades/barra-habilidades.component';
 import { PersonaService } from './servicios/persona.service';
 import { EducacionService} from './servicios/educacion.service';
@@ -48,7 +48,8 @@ import { CursosComponent } from './components/cursos/cursos.component';
     HttpClientModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    NgbModule
+    NgbModule,
+    FormsModule
   ],
   providers: [PersonaService, EducacionService, ExperienciaService],
   bootstrap: [AppComponent, BarraHabilidadesComponent],
