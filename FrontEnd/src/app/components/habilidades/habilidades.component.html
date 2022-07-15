@@ -1,34 +1,55 @@
 <div class="contenedorHabilidades container">
   <div class="tabla my-auto px-4">
+    <div class="habilidades">
       <h3 class="pt-3">Habilidades Profesionales</h3>
-      <div class="skills-section">
+      <div class="icon">
+        <a class="nav-link" href="#" title="agregar"
+          ><i
+            class="icon-plus fa-solid fa-circle-plus"
+            style="color: #3e4a5e"
+          ></i
+        ></a>
+        <a class="nav-link" href="#" title="editar"
+          ><i class="fa-solid fa-pen" style="color: #3e4a5e"></i
+        ></a>
+        <a class="nav-link" href="#" title="borrar"
+          ><i class="fa-solid fa-trash-can" style="color: #3e4a5e"></i
+        ></a>
+      </div>
+    </div>
+    <div class="skills-section">
       <div class="row">
         <div class="col-6">
           <li *ngFor="let habilidadT of habilidadesList">
             <div class="mb-2">
               <div *ngIf="habilidadT.tipo === 'tecnica'">
-            <span >{{habilidadT.nombre}}</span>
-            <div class="my-1">
-              <ngb-progressbar type="primary" [value]="habilidadT.valor"></ngb-progressbar>
+                <span>{{ habilidadT.nombre }}</span>
+                <div class="my-1">
+                  <ngb-progressbar
+                    type="primary"
+                    [value]="habilidadT.valor"
+                  ></ngb-progressbar>
+                </div>
+              </div>
             </div>
-            </div>
-          </div>
           </li>
         </div>
-        <div class="col-6"> 
+        <div class="col-6">
           <li *ngFor="let habilidadP of habilidadesList">
-          <div class="mb-2">
-            <div *ngIf="habilidadP.tipo === 'personal'">
-            <span>{{habilidadP.nombre}}</span>
-            <div class=" my-1">
-              <ngb-progressbar type="success" [value]="habilidadP.valor"></ngb-progressbar>
-              </div> 
-            </div>
+            <div class="mb-2">
+              <div *ngIf="habilidadP.tipo === 'personal'">
+                <span>{{ habilidadP.nombre }}</span>
+                <div class="my-1">
+                  <ngb-progressbar
+                    type="success"
+                    [value]="habilidadP.valor"
+                  ></ngb-progressbar>
+                </div>
+              </div>
             </div>
           </li>
         </div>
       </div>
     </div>
-  </div> 
+  </div>
 </div>
-          

@@ -1,23 +1,41 @@
 <div class="contenedorProyectos container">
-    <div class="tabla my-auto px-4">
+  <div class="tabla my-auto px-4">
+    <div class="proyectos">
+      <div class="icon-plus">
         <h3 class="pt-3">Proyectos</h3>
-    <div class="row">
-        <div class="col-md-12">
-            <div class="main-timeline">
-                <a href="#" class="timeline">
-                    <div class="timeline-icon"><i class="fa-solid fa-globe"></i></div>
-                    <li *ngFor="let proyecto of proyectosList">
-                    <div class="timeline-content">
-                        <h3 class="title">{{proyecto.nombre}}</h3>
-                        <p class="description ">
-                            {{proyecto.descripcion}}
-                            <!-- 2022 - Desarrollo de una aplicación web full stack para Argentina programa #YoProgramo, que muestre el propio portfolio web a traves de una aplicación de arquitectura distribuida. -->
-                        </p>
-                    </div>
-                </li>
-                </a>
-            </div>
-        </div>
+        <a class="nav-link" href="#" title="agregar"
+          ><i
+            class="icon-plus fa-solid fa-circle-plus"
+            style="color: #3e4a5e"
+          ></i
+        ></a>
+      </div>
     </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="main-timeline">
+          <a href="#" class="timeline">
+            <div class="timeline-icon"><i class="fa-solid fa-globe"></i></div>
+            <li *ngFor="let proyecto of proyectosList">
+              <div class="timeline-content">
+                <div class="icon">
+                <h3 class="title">{{ proyecto.nombre }}</h3>
+                    <a class="nav-link" href="#" title="editar"
+                      ><i class="fa-solid fa-pen" style="color: #3e4a5e"></i
+                    ></a>
+                    <a class="nav-link" href="#" title="borrar"
+                      ><i class="fa-solid fa-trash-can" style="color: #3e4a5e"></i
+                    ></a>
+                  </div>
+                <p class="description">
+                  {{ proyecto.descripcion }}
+                  <!-- 2022 - Desarrollo de una aplicación web full stack para Argentina programa #YoProgramo, que muestre el propio portfolio web a traves de una aplicación de arquitectura distribuida. -->
+                </p>
+              </div>
+            </li>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
-                

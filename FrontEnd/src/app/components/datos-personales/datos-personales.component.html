@@ -1,19 +1,26 @@
 <div class="contenedorDatosPersonales container">
-  <div class="row my-auto px-4 d-flex ">
+  <div class="row my-auto px-4 d-flex">
     <div class="col-6">
-      <p>
-        {{persona?.presentacion}}
-      </p>
+      <div class="icon-plus">
+        <a class="nav-link" href="#" title="editar"
+          ><i class="fa-solid fa-pen" style="color: #3e4a5e"></i
+        ></a>
+        <p>
+          {{ persona?.presentacion }}
+        </p>
+      </div>
     </div>
     <div class="col-6 d-flex align-items-stretch">
       <div class="row">
         <div class="col-4 text-end"><i class="fa-solid fa-at"></i></div>
-        <div class="col-8 text-start">{{persona?.email}}</div>
-        <div class="col-4 text-end"><i class="fa-solid fa-location-dot"></i></div>
-        <div class="col-8 text-start">{{persona?.direccion}}</div>
+        <div class="col-8 text-start">{{ persona?.email }}</div>
+        <div class="col-4 text-end">
+          <i class="fa-solid fa-location-dot"></i>
+        </div>
+        <div class="col-8 text-start">{{ persona?.direccion }}</div>
         <div class="col-4 text-end"><i class="fa-brands fa-whatsapp"></i></div>
-        <div class="col-8 text-start">{{persona?.telefono}}</div>
+        <div class="col-8 text-start">{{ persona?.telefono }}</div>
+      </div>
     </div>
-  </div>
   </div>
 </div>

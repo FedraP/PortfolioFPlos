@@ -32,3 +32,26 @@ p {
 .listaCursos{
     list-style-type:none
 }
+
+.icon {
+    display: flex;
+    justify-content:last baseline;
+    align-items:center;
+    margin-right: 10px;
+    margin-left: 500px;
+    vertical-align: middle;
+    
+  }
+
+  .icon-plus {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin-top: 10px;
+  }
+
+  .educacion {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+} 

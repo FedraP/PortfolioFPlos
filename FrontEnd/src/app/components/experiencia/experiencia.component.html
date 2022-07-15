@@ -1,7 +1,15 @@
 <div class="contenedorExperiencia container">
   <div class="row my-auto px-4 d-flex">
     <div class="work-experience-section">
-      <h3 class="pt-3">Experiencia Laboral</h3>
+      <div class="icon-plus">
+        <h3 class="pt-3">Experiencia Laboral</h3>
+        <a class="nav-link" href="#" title="agregar"
+          ><i
+            class="icon-plus fa-solid fa-circle-plus"
+            style="color: #3e4a5e"
+          ></i
+        ></a>
+      </div>
       <div class="timeline">
         <li *ngFor="let experiencia of experienciaList">
           <div class="timeline-card timeline-card-primary card shadow-sm">
@@ -17,7 +25,23 @@
                 <div class="col-9 d-flex">
                   <div class="row">
                     <div class="col-12">
-                      <div class="h5 mb-1">{{ experiencia.puesto }}</div>
+                      <div class="experiencia">
+                        <div class="h5 mb-1">{{ experiencia.puesto }}</div>
+                        <div class="icon">
+                          <a class="nav-link" href="#" title="editar"
+                            ><i
+                              class="fa-solid fa-pen"
+                              style="color: #3e4a5e"
+                            ></i
+                          ></a>
+                          <a class="nav-link" href="#" title="borrar"
+                            ><i
+                              class="fa-solid fa-trash-can"
+                              style="color: #3e4a5e"
+                            ></i
+                          ></a>
+                        </div>
+                      </div>
                     </div>
                     <div class="col-12">
                       <span class="text-muted h6">
@@ -34,7 +58,7 @@
                       <br />
                     </p> -->
                     <p>
-                      {{experiencia.descripcion}}
+                      {{ experiencia.descripcion }}
                       <br />
                     </p>
                   </div>

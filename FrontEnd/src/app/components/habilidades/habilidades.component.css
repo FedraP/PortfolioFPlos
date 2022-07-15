@@ -7,6 +7,7 @@
     border-style: solid;
     height: 100%;
     margin-top: 5px;
+    align-items: center;
 }
 
 .tabla{
@@ -16,3 +17,14 @@
 li {
     list-style-type:none
 }
+
+.icon {
+    display: flex;
+    margin-right: 10px;
+  }
+
+  .habilidades {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+} 

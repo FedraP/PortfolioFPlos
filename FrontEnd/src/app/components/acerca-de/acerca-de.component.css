@@ -16,3 +16,10 @@ p {
 li {
     list-style-type:none
 }
+
+.icon {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin-top: 10px;
+  }

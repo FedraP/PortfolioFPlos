@@ -14,3 +14,19 @@ p {
     text-align: justify;
     padding-top: 30px;
 }
+
+.icon-plus {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    margin-top: 10px;
+  }
+
+  .icon {
+    display: flex;
+    justify-content:last baseline;
+    align-items:center;
+    margin-right: 10px;
+    vertical-align: middle;
+    
+  }

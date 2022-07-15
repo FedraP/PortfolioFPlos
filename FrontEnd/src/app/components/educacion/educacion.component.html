@@ -1,50 +1,76 @@
 <div class="contenedorEducacion container">
   <div class="row my-auto px-4 d-flex">
     <div class="education-section">
-      <h3 class="pt-3">Educación</h3>
+      <div class="icon-plus">
+        <h3 class="pt-3">Educación</h3>
+        <a class="nav-link" href="#" title="agregar"
+          ><i
+            class="icon-plus fa-solid fa-circle-plus"
+            style="color: #3e4a5e"
+          ></i
+        ></a>
+      </div>
       <div class="timeline">
         <li class="listaCursos" *ngFor="let educacion of educacionList">
-        <div class="timeline-card timeline-card-success card shadow-sm">
-          <div class="card-body">
-            <div class="row">
-              <div class="col-3">
-                <img
-                  class="card-img"
-                  [src]="educacion.estaEdu.url_logoEstablecimiento"
-                  alt={{educacion.estaEdu.alt_logoEstablecimiento}}
-                />
-              </div>
-              <div class="col-9 d-flex">
-                <div class="row">
-                  <div class="col-12">
-                    <div class="h5 mb-1">{{educacion.carrera}}</div>
-                  </div>
-                  <div class="col-12">
-                    <span class="text-muted h6">
-                      {{educacion.estaEdu.establecimientoEdu}}
-                      <!-- {{educacion.institucion}} -->
-                    </span>
-                  </div>
-                  <div class="col-12">
-                    <div class="text-muted text-small mt-2 mb-2">
-                      <time>{{educacion.periodo}}</time>
+          <div class="timeline-card timeline-card-success card shadow-sm">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-3">
+                  <img
+                    class="card-img"
+                    [src]="educacion.estaEdu.url_logoEstablecimiento"
+                    alt="{{ educacion.estaEdu.alt_logoEstablecimiento }}"
+                  />
+                </div>
+                <div class="col-9 d-flex">
+                  <div class="row">
+                    <div class="col-12">
+                      <div class="educacion">
+                        <div class="h5 mb-3">{{ educacion.carrera }}</div>
+                        <div class="icon">
+                          <a class="nav-link" href="#" title="editar"
+                            ><i
+                              class="fa-solid fa-pen"
+                              style="color: #3e4a5e"
+                            ></i
+                          ></a>
+                          <a class="nav-link" href="#" title="borrar"
+                            ><i
+                              class="fa-solid fa-trash-can"
+                              style="color: #3e4a5e"
+                            ></i
+                          ></a>
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                  
-                  <div class="col-12">
-                    <div class="text-muted text-small mt-2 mb-2">
-                      <!-- <ul *ngFor="let cursos of cursosList"> -->
+                    <div class="col-12">
+                      <span class="text-muted h6">
+                        {{ educacion.estaEdu.establecimientoEdu }}
+                        <!-- {{educacion.institucion}} -->
+                      </span>
+                    </div>
+                    <div class="col-12">
+                      <div class="text-muted text-small mt-2 mb-2">
+                        <time>{{ educacion.periodo }}</time>
+                      </div>
+                    </div>
+
+                    <div class="col-12">
+                      <div class="text-muted text-small mt-2 mb-2">
+                        <!-- <ul *ngFor="let cursos of cursosList"> -->
                         <!-- <li>{{educacion.cursos}}</li>  -->
-                      <!-- </ul> -->
-                      <p *ngIf="educacion?.cursos"><app-cursos></app-cursos></p>
+                        <!-- </ul> -->
+                        <p *ngIf="educacion?.cursos">
+                          <app-cursos></app-cursos>
+                        </p>
+                      </div>
                     </div>
-                  </div> 
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </li>
+        </li>
       </div>
     </div>
   </div>
