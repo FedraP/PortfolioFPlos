@@ -4,12 +4,14 @@ package com.portfolio.FP.Entity;
 import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
+import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import lombok.Getter;
@@ -17,6 +19,7 @@ import lombok.Setter;
 
 @Getter @Setter
 @Entity
+@Table(name = "persona")
 public class Persona implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -49,8 +52,9 @@ public class Persona implements Serializable {
     
     //@OneToMany (mappedBy = "idEdu", fetch = FetchType.LAZY)
    // private List<Educacion> educacionList;
-    //@OneToMany (mappedBy = "idExpe",fetch = FetchType.LAZY)
-    //private List<ExperienciaLaboral> experiencianList;
+    
+    //@OneToMany (mappedBy = "experiencia_laboral",cascade = CascadeType.ALL, orphanRemoval =true)
+    //private List<ExperienciaLaboral> experienciaList;
     
     public Persona(Long idPer, String nombre, String apellido, String direccion, String telefono, Date fechaNac, String email,
                     String presentacion, String acercaDe, String urlAvatar, String urlFondo, String titulo) {

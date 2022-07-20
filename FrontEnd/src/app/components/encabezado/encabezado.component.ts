@@ -4,6 +4,7 @@ import { Subscription } from 'rxjs';
 import { persona } from 'src/app/model/persona.model';
 import { PersonaService } from 'src/app/servicios/persona.service';
 import { PortfolioComponent } from '../portfolio/portfolio.component';
+import { TokenService } from 'src/app/servicios/token.service';
 
 @Component({
   selector: 'app-encabezado',
@@ -18,12 +19,20 @@ export class EncabezadoComponent implements OnInit {
  
   persona: persona = new persona ("", "", "", "", "", "", "", "", "","", "");
   
-  constructor(public datosPersona: PersonaService) { }
+  constructor(public datosPersona: PersonaService, private tokenService: TokenService) { }
+
+  isLogged = false;
 
   ngOnInit(): void {
     this.datosPersona.getPersona().subscribe(datos =>{
     this.persona = datos;
-    })
+    });
+
+    if(this.tokenService.getToken()){
+      this.isLogged = true;
+    }else{
+      this.isLogged = false;
+    }
   };
 
   // miPortfolio: any;

@@ -40,9 +40,9 @@ public class ExperienciaLaboralController {
     
     
     @PostMapping ("/experiencia/crear")
-    public String crearExperiencia (@RequestBody ExperienciaLaboral experiencia){
+    public void crearExperiencia (@RequestBody ExperienciaLaboral experiencia){
         iExpeServ.crearExperiencia(experiencia);
-        return "La experiencia laboral fue creada correctamente";
+        //return "La experiencia laboral fue creada correctamente";
     }
     
     @DeleteMapping ("/experiencia/borrar/{id}")

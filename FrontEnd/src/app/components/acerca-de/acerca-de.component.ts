@@ -4,6 +4,7 @@ import { Subscription } from 'rxjs';
 import { PersonaService } from 'src/app/servicios/persona.service';
 import { persona } from 'src/app/model/persona.model';
 import { DatosPersonalesComponent } from '../datos-personales/datos-personales.component';
+import { TokenService } from 'src/app/servicios/token.service';
 
 @Component({
   selector: 'app-acerca-de',
@@ -16,15 +17,26 @@ export class AcercaDeComponent implements OnInit {
   persona: persona = new persona ("", "", "", "", "", "", "", "", "" ,"", "");
   acerca_DeList: Array<string> = [];
   
-  constructor(public datosPersona: PersonaService) { }
+  constructor(public datosPersona: PersonaService, private tokenService: TokenService) { }
+
+  isLogged = false;
 
   ngOnInit(): void {
     this.datosPersona.getPersona().subscribe(datos =>{
     this.persona = datos;
     this.acerca_DeList = datos.acercaDe.split("\n");
     console.log(this.acerca_DeList);
-    console.log(datos.acercaDe)})
+    console.log(datos.acercaDe)});
+
+    if(this.tokenService.getToken()){
+      this.isLogged = true;
+    }else{
+      this.isLogged = false;
+    }
+
   };
+
+  
 
   // miPortfolio: any;
 

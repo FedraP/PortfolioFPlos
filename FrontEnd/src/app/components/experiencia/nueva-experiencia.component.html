@@ -1,0 +1,35 @@
+<div class="contenedorNuevaExpe container">
+    <div class="row my-auto px-4 d-flex">
+        <div>
+            <form (ngSubmit)="onCreate()" novalidate #f=""ngForm>
+                <div class="form-group">
+                    <label for= "puesto">Puesto</label>
+                    <input type="text" class="form-control" id="puesto" name="puesto" [(ngModel)]="puesto" required>
+                </div>
+                <div class="form-group">
+                    <label for= "descripcion">Descripcion de la tarea</label>
+                    <input type="text" class="form-control" id="descripcion" name="descripcion" [(ngModel)]="descripcion" required>
+                </div>
+                <div class="form-group">
+                    <label for= "periodo">Periodo de trabajo</label>
+                    <input type="text" class="form-control" id="periodo" name="periodo" [(ngModel)]="periodo" required>
+                </div>
+                <div class="form-group">
+                    <label for= "empresa">Empresa</label>
+                    <input type="text" class="form-control" id="empresa" name="empresa" [(ngModel)]="empresa" required>
+                </div>
+                <div class="form-group">
+                    <label for= "urlLogo">URL Logo Empresa</label>
+                    <input type="text" class="form-control" id="urlLogo" name="urlLogo" [(ngModel)]="urlLogo" required>
+                </div>
+                <div class="form-group">
+                    <label for= "altLogo">Alternativa Logo Empresa</label>
+                    <input type="text" class="form-control" id="altLogo" name="altLogo" [(ngModel)]="altLogo" required>
+                </div>
+                <button class="btn btn-secondary">
+                    Agregar
+                </button>
+            </form>
+        </div>
+    </div>
+</div>

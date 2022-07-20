@@ -3,7 +3,7 @@
     <div class="proyectos">
       <div class="icon-plus">
         <h3 class="pt-3">Proyectos</h3>
-        <a class="nav-link" href="#" title="agregar"
+        <a class="nav-link" href="#" *ngIf="isLogged" title="agregar"
           ><i
             class="icon-plus fa-solid fa-circle-plus"
             style="color: #3e4a5e"
@@ -20,10 +20,10 @@
               <div class="timeline-content">
                 <div class="icon">
                 <h3 class="title">{{ proyecto.nombre }}</h3>
-                    <a class="nav-link" href="#" title="editar"
+                    <a class="nav-link" href="#" *ngIf="isLogged" title="editar"
                       ><i class="fa-solid fa-pen" style="color: #3e4a5e"></i
                     ></a>
-                    <a class="nav-link" href="#" title="borrar"
+                    <a class="nav-link" href="#" *ngIf="isLogged" title="borrar"
                       ><i class="fa-solid fa-trash-can" style="color: #3e4a5e"></i
                     ></a>
                   </div>

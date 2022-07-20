@@ -7,6 +7,7 @@
     border-style: solid;
     height: 100%;
     margin-top: 5px;
+    align-items: center;
 }
 
 p {
@@ -29,16 +30,21 @@ p {
     border-left-color: #37BC9B;
  }
 
+ .education-section {
+    align-items: center;
+    vertical-align: middle;
+ }
+
 .listaCursos{
     list-style-type:none
 }
 
 .icon {
     display: flex;
-    justify-content:last baseline;
+    /* justify-content: space-between; */
     align-items:center;
     margin-right: 10px;
-    margin-left: 500px;
+    /* margin-left: 500px; */
     vertical-align: middle;
     
   }

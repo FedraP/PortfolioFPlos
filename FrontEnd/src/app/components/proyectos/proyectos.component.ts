@@ -3,6 +3,7 @@ import { PortfolioService } from 'src/app/servicios/portfolio.service';
 import { Subscription } from 'rxjs';
 import { proyectos } from 'src/app/model/proyectos.model';
 import { ProyectosService } from 'src/app/servicios/proyectos.service';
+import { TokenService } from 'src/app/servicios/token.service';
 
 @Component({
   selector: 'app-proyectos',
@@ -16,13 +17,21 @@ export class ProyectosComponent implements OnInit {
   proyectosList:any;
 
 
-  constructor(private datosProyectos: ProyectosService) { }
+  constructor(private datosProyectos: ProyectosService, private tokenService: TokenService) { }
+
+  isLogged = false;
 
   ngOnInit(): void {
     this.datosProyectos.traerProyectos().subscribe(datos =>{
       this.proyectosList = datos;
       console.log(datos);
     });
+
+    if(this.tokenService.getToken()){
+      this.isLogged = true;
+    }else{
+      this.isLogged = false;
+    }
   }
 
 }

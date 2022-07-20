@@ -4,6 +4,7 @@ import { Subscription } from 'rxjs';
 import { educacion } from 'src/app/model/educacion.model';
 import { EducacionService } from 'src/app/servicios/educacion.service';
 import { CursoService } from 'src/app/servicios/curso.service';
+import { TokenService } from 'src/app/servicios/token.service';
 
 
 @Component({
@@ -20,7 +21,9 @@ export class EducacionComponent implements OnInit {
   educacionList: any;
   
 
-  constructor(private datosEducacion: EducacionService) { }
+  constructor(private datosEducacion: EducacionService, private tokenService: TokenService) { }
+
+  isLogged = false;
 
   ngOnInit(): void {
     
@@ -29,6 +32,12 @@ export class EducacionComponent implements OnInit {
       this.educacionList = datos;
 
     });
+
+    if(this.tokenService.getToken()){
+      this.isLogged = true;
+    }else{
+      this.isLogged = false;
+    }
 
     }
   }

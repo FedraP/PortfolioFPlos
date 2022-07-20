@@ -3,7 +3,7 @@
     <div class="work-experience-section">
       <div class="icon-plus">
         <h3 class="pt-3">Experiencia Laboral</h3>
-        <a class="nav-link" href="#" title="agregar"
+        <a class="nav-link" href="/nueva-experiencia" *ngIf="isLogged" title="agregar"
           ><i
             class="icon-plus fa-solid fa-circle-plus"
             style="color: #3e4a5e"
@@ -18,23 +18,23 @@
                 <div class="col-3">
                   <img
                     class="card-img-left"
-                    [src]="experiencia.empre.urlLogo"
-                    alt="{{ experiencia.empre.altLogo }}"
+                    [src]="experiencia.urlLogo"
+                    alt="{{experiencia.altLogo}}"
                   />
                 </div>
-                <div class="col-9 d-flex">
+                <div class="col-9">
                   <div class="row">
                     <div class="col-12">
                       <div class="experiencia">
-                        <div class="h5 mb-1">{{ experiencia.puesto }}</div>
-                        <div class="icon">
-                          <a class="nav-link" href="#" title="editar"
+                        <div class="h5 mb-1">{{experiencia.puesto}}</div>
+                        <div class="icon text-end">
+                          <a class="nav-link" href="#" *ngIf="isLogged" title="editar"
                             ><i
                               class="fa-solid fa-pen"
                               style="color: #3e4a5e"
                             ></i
                           ></a>
-                          <a class="nav-link" href="#" title="borrar"
+                          <a class="nav-link" href="#" *ngIf="isLogged" title="borrar"
                             ><i
                               class="fa-solid fa-trash-can"
                               style="color: #3e4a5e"
@@ -45,12 +45,12 @@
                     </div>
                     <div class="col-12">
                       <span class="text-muted h6">
-                        {{ experiencia.empre.nombre }}
+                        {{experiencia.empresa}}
                       </span>
                     </div>
                     <div class="col-12">
                       <div class="text-muted text-small mt-2 mb-2">
-                        <time>{{ experiencia.periodo }}</time>
+                        <time>{{experiencia.periodo}}</time>
                       </div>
                     </div>
                     <!-- <p *ngFor="let descripcion of descripcionList">
@@ -58,7 +58,7 @@
                       <br />
                     </p> -->
                     <p>
-                      {{ experiencia.descripcion }}
+                      {{experiencia.descripcion}}
                       <br />
                     </p>
                   </div>

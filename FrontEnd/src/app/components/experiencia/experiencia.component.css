@@ -36,7 +36,7 @@ p {
 
 .icon {
     display: flex;
-    justify-content:last baseline;
+    /* justify-content:last baseline; */
     align-items:center;
     margin-right: 10px;
     vertical-align: middle;

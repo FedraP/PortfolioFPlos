@@ -1,25 +1,28 @@
 export class experiencia {
 
     idExpe?: number;
-    img: String;
-    altImg: String;
-    puesto: String;
-    empresa: String;
-    periodo: String;
     descripcion: String;
+    puesto: String;
+    periodo: String;
+    empresa: String;
+    altLogo: String;
+    urlLogo: String;
     
-    constructor (img: String,
-        altImg: String,
+    
+    constructor (
+        descripcion: String,
         puesto: String,
-        empresa: String,
         periodo: String,
-        descripcion: String){
+        empresa: String,
+        altLogo: String,
+        urlLogo: String ){
 
-            this.img = img;
-            this.altImg = altImg,
-            this.puesto = puesto;
-            this.empresa = empresa;
-            this.periodo = periodo;
             this.descripcion = descripcion;
+            this.puesto = puesto;
+            this.periodo = periodo;
+            this.empresa = empresa;
+            this.altLogo = altLogo,
+            this.urlLogo = urlLogo;
+            
         }
     }

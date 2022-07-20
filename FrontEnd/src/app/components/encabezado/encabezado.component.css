@@ -25,14 +25,34 @@
     filter: grayscale(1);
 }
 
-h2 {
+/* h2 {
     position:absolute;
     text-align: center;
     top: 25%;
-}
+} */
 
 p {
     position:absolute;
     text-align: center;
     top: 40%;
 }
+
+/* .icon {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin-top: 10px;
+  } */
+
+  .nombre {
+    display: flex;
+    position:absolute;
+    text-align:center;
+    top: 25%;
+    left: 50%;
+    margin: -10px 0 0 -100px;
+  }
+
+  .icon {
+    margin-left: 50px;
+  }

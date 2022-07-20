@@ -3,6 +3,7 @@ import { PortfolioService } from 'src/app/servicios/portfolio.service';
 import { Subscription } from 'rxjs';
 import { experiencia } from 'src/app/model/experiencia.model';
 import { ExperienciaService } from 'src/app/servicios/experiencia.service';
+import { TokenService } from 'src/app/servicios/token.service';
 
 @Component({
   selector: 'app-experiencia',
@@ -12,18 +13,28 @@ import { ExperienciaService } from 'src/app/servicios/experiencia.service';
 })
 export class ExperienciaComponent implements OnInit {
 
-  experiencia: experiencia = new experiencia ("", "", "", "", "", "");
+  experiencia: experiencia = new experiencia ("", "", "","","","");
   
   descripcionList: any;
   experienciaList: any;
 
-  constructor(private datosExperiencia: ExperienciaService) { }
+  constructor(private datosExperiencia: ExperienciaService, private tokenService: TokenService ) { }
+  isLogged = false;
 
   ngOnInit(): void {
-    
-    this.datosExperiencia.getExperiencia().subscribe(datos =>{
+
+    this.datosExperiencia.traerExperiencia().subscribe(datos =>{
       this.experiencia = datos;
       this.experienciaList = datos;
     });
+
+    if(this.tokenService.getToken()){
+      this.isLogged = true;
+    }else{
+      this.isLogged = false;
+    }
+    
   }
 }
+
+

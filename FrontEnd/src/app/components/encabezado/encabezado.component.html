@@ -1,12 +1,18 @@
 <div class="contenedorEncabezado container">
   <div class="row">
-      <div class="avatar">
-      </div>
+    <div class="avatar"></div>
+    <div class="nombre">
       <h2 data-aos="fade-left" data-aos-delay="50">
-       {{persona?.nombre}}
+        {{ persona?.nombre }} {{ persona?.apellido }}
       </h2>
-      <p data-aos="fade-left" data-aos-delay="100">
-        {{persona?.titulo}}
-      </p>
+      <div class="icon">
+      <a  href="#" *ngIf="isLogged" title="editar">
+        <i class="fa-solid fa-pen" style="color: #3e4a5e"></i>
+      </a>
+    </div>
+    </div>
+    <p data-aos="fade-left" data-aos-delay="100">
+      {{ persona?.titulo }}
+    </p>
   </div>
 </div>

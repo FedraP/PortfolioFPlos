@@ -24,9 +24,15 @@ p {
 
   .icon {
     display: flex;
-    justify-content:last baseline;
+    justify-content:space-between;
     align-items:center;
     margin-right: 10px;
     vertical-align: middle;
     
   }
+
+  .datosPersonales {
+    display: flex;
+    align-items:baseline;
+    justify-content:space-between;
+} 
