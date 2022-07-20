@@ -33,9 +33,10 @@ public class ExperienciaLaboralController {
     }
     
     @GetMapping ("/experiencia/ver/{id}")
-    @ResponseBody
-    public ExperienciaLaboral buscarExperiencia(@PathVariable Long id){
-        return iExpeServ.buscarExperiencia(id);
+    //@ResponseBody
+    public ExperienciaLaboral getById(@PathVariable("id") Long id){
+        ExperienciaLaboral expe = iExpeServ.buscarExperiencia(id);
+        return expe;
     }
     
     
@@ -46,17 +47,15 @@ public class ExperienciaLaboralController {
     }
     
     @DeleteMapping ("/experiencia/borrar/{id}")
-    
     public String borrarExperiencia(@PathVariable Long id){
         iExpeServ.borrarExperiencia(id);
         return "La experiencia laboral fue eliminada correctamente";
     }
     
     @PutMapping ("/experiencia/editar/{id}")
-    
-    public String editarExperiencia (@RequestBody ExperienciaLaboral experiencia){
+    public void editarExperiencia (@RequestBody ExperienciaLaboral experiencia){
         iExpeServ.editarExperiencia(experiencia);
-        return "La experiencia fue modificada correctamente";
+        //return "La experiencia fue modificada correctamente";
     }
 }
 

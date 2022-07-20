@@ -1,4 +1,4 @@
-.contenedorNuevaExpe {
+.contenedorEditarExpe {
     background-color:transparent;
     display: flex;
     border-radius: 10px!important;
@@ -14,4 +14,3 @@
 .form-group {
     min-width: 925px;
 }
-

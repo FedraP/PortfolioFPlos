@@ -23,11 +23,7 @@ export class ExperienciaComponent implements OnInit {
 
   ngOnInit(): void {
 
-    this.datosExperiencia.traerExperiencia().subscribe(datos =>{
-      this.experiencia = datos;
-      this.experienciaList = datos;
-    });
-
+    this.cargarExperiencia();
     if(this.tokenService.getToken()){
       this.isLogged = true;
     }else{
@@ -35,6 +31,25 @@ export class ExperienciaComponent implements OnInit {
     }
     
   }
+
+    cargarExperiencia(): void {
+    this.datosExperiencia.traerExperiencia().subscribe(datos =>{
+    this.experiencia = datos;
+    this.experienciaList = datos;
+    })
+  }
+
+    borrar(id?: number){
+      if(id != undefined){
+        this.datosExperiencia.borrarExp(id).subscribe(
+          data =>{
+            this.cargarExperiencia();
+          }, err =>{
+            alert(" No se pudo borrar la experiencia");
+          }
+        )
+      }
+    }
 }
 
 

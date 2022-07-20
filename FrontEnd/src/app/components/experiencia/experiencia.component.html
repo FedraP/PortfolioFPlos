@@ -3,7 +3,7 @@
     <div class="work-experience-section">
       <div class="icon-plus">
         <h3 class="pt-3">Experiencia Laboral</h3>
-        <a class="nav-link" href="/nueva-experiencia" *ngIf="isLogged" title="agregar"
+        <a class="nav-link" href="/nueva-experiencia" *ngIf="isLogged" title="Agregar"
           ><i
             class="icon-plus fa-solid fa-circle-plus"
             style="color: #3e4a5e"
@@ -28,13 +28,13 @@
                       <div class="experiencia">
                         <div class="h5 mb-1">{{experiencia.puesto}}</div>
                         <div class="icon text-end">
-                          <a class="nav-link" href="#" *ngIf="isLogged" title="editar"
+                          <a class="nav-link" href="/editar-experiencia/{{experiencia.idExpe}}" *ngIf="isLogged" title="Editar"
                             ><i
                               class="fa-solid fa-pen"
                               style="color: #3e4a5e"
                             ></i
                           ></a>
-                          <a class="nav-link" href="#" *ngIf="isLogged" title="borrar"
+                          <a class="nav-link" href="#" *ngIf="isLogged" (click)= "borrar(experiencia.idExpe)" title="Borrar"
                             ><i
                               class="fa-solid fa-trash-can"
                               style="color: #3e4a5e"

@@ -21,4 +21,7 @@ public interface IExperienciaLaboralService {
     
     //Editar un objeto de tipo Experiencia Laboral
     public void editarExperiencia (ExperienciaLaboral experiencia);
+    
+    //Verificar por Id si un objeto de tipo Experiencia Laboral existe
+    public boolean existePorId (Long id);
 }

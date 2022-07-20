@@ -25,7 +25,7 @@ public class ImpExperienciaLaboralService implements IExperienciaLaboralService 
     List<ExperienciaLaboral> expeList = iExpeRepo.findAll();
         return expeList;
     }
-
+    
     @Override
      public void crearExperiencia (ExperienciaLaboral experiencia) {
         iExpeRepo.save(experiencia);    
@@ -37,7 +37,7 @@ public class ImpExperienciaLaboralService implements IExperienciaLaboralService 
     }
 
     @Override
-   public ExperienciaLaboral buscarExperiencia (Long id) {
+     public ExperienciaLaboral buscarExperiencia (Long id) {
         ExperienciaLaboral expe = iExpeRepo.findById(id).orElse(null);
         return expe;
     }
@@ -45,6 +45,11 @@ public class ImpExperienciaLaboralService implements IExperienciaLaboralService 
     @Override
     public void editarExperiencia (ExperienciaLaboral experiencia){
         iExpeRepo.save(experiencia);
+    }
+    
+    @Override
+    public boolean existePorId(Long id){
+        return iExpeRepo.existsById(id);
     }
     
 }

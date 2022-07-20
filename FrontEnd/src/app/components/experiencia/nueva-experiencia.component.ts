@@ -29,8 +29,8 @@ export class NuevaExperienciaComponent implements OnInit {
       this.router.navigate(['']);
     }
     , err =>{
-      // alert("Falló");
-      console.log('error de carga',err);
+      alert("Falló");
+      // console.log('error de carga',err);
       this.router.navigate(['']);
     })
   }
