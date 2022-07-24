@@ -34,7 +34,7 @@ public class ExperienciaLaboralController {
     
     @GetMapping ("/experiencia/ver/{id}")
     //@ResponseBody
-    public ExperienciaLaboral getById(@PathVariable("id") Long id){
+    public ExperienciaLaboral buscarExperiencia(@PathVariable("id") Long id){
         ExperienciaLaboral expe = iExpeServ.buscarExperiencia(id);
         return expe;
     }

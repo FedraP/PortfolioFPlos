@@ -27,18 +27,32 @@ export class EducacionComponent implements OnInit {
 
   ngOnInit(): void {
     
-    this.datosEducacion.traerEducacion().subscribe(datos =>{
-      this.educacion = datos;
-      this.educacionList = datos;
-
-    });
-
+    this.cargarEducacion();
     if(this.tokenService.getToken()){
       this.isLogged = true;
     }else{
       this.isLogged = false;
     }
 
+  }
+
+    cargarEducacion(): void{
+        this.datosEducacion.traerEducacion().subscribe(datos =>{
+        this.educacion = datos;
+        this.educacionList = datos;
+      }) 
+    };
+
+    borrar(id?: number){
+      if(id != undefined){
+        this.datosEducacion.borrarEdu(id).subscribe(
+          data =>{
+            this.cargarEducacion();
+          }, err =>{
+            alert(" No se pudo borrar la experiencia");
+          }
+        )
+      }
     }
   }
 

@@ -9,9 +9,9 @@ import { RedesService } from 'src/app/servicios/redes.service';
 })
 export class PieDePaginaComponent implements OnInit {
 
-  redes: redes = new redes ("","");
-  redesList: any;
-  unaRed: any;
+  redes?: redes = new redes ("","");
+  redesList?: any;
+  unaRed?: any;
 
   constructor(private datosRedes: RedesService) { }
 

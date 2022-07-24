@@ -1,6 +1,6 @@
 export class educacion {
 
-    id_edu? : number;
+    idEdu? : number;
     carrera: String;
     cursos: String;
     institucion: String;

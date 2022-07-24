@@ -3,7 +3,7 @@
     <div class="education-section">
       <div class="icon-plus">
         <h3 class="pt-3">Educación</h3>
-        <a class="nav-link" href="#" *ngIf="isLogged" title="agregar"
+        <a class="nav-link" href="/nueva-educacion" *ngIf="isLogged" title="agregar"
           ><i
             class="icon-plus fa-solid fa-circle-plus"
             style="color: #3e4a5e"
@@ -18,8 +18,8 @@
                 <div class="col-3">
                   <img
                     class="card-img"
-                    [src]="educacion.estaEdu.url_logoEstablecimiento"
-                    alt="{{educacion.estaEdu.alt_logoEstablecimiento}}"
+                    [src]="educacion.urlLogoInst"
+                    alt="{{educacion.altImgInst}}"
                   />
                 </div>
                 <div class="col-9">
@@ -28,13 +28,13 @@
                       <div class="educacion">
                         <div class="h5 mb-3">{{educacion.carrera}}</div>
                           <div class="icon text-end">
-                            <a class="nav-link" href="#" *ngIf="isLogged" title="editar"
+                            <a class="nav-link" href="/editar-educacion/{{educacion.idEdu}}" *ngIf="isLogged" title="editar"
                               ><i
                                 class="fa-solid fa-pen"
                                 style="color: #3e4a5e"
                               ></i
                             ></a>
-                            <a class="nav-link" href="#" *ngIf="isLogged" title="borrar"
+                            <a class="nav-link" href="#" *ngIf="isLogged" (click)= "borrar(educacion.idEdu)" title="borrar"
                               ><i
                                 class="fa-solid fa-trash-can"
                                 style="color: #3e4a5e"
@@ -45,8 +45,8 @@
                   </div>
                     <div class="col-12">
                       <span class="text-muted h6">
-                        {{educacion.estaEdu.establecimientoEdu}}
-                        <!-- {{educacion.institucion}} -->
+                        <!-- {{educacion.estaEdu.establecimientoEdu}} -->
+                        {{educacion.institucion}}
                       </span>
                     </div>
                     <div class="col-12">

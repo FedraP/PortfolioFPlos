@@ -1,0 +1,47 @@
+<div class="contenedorEditarEdu container" *ngIf = "edu">
+    <div class="row my-auto px-4 d-flex">
+        <div>
+            <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+                <div class="mb-3 mt-3">
+                <div class="form-group">
+                    <label for= "carrera">Carrera</label>
+                    <input type="text" class="form-control" id="carrera" name="carrera" [(ngModel)]="edu.carrera" required>
+                </div>
+                </div>
+                <div class="mb-3">
+                <div class="form-group">
+                    <label for= "institucion">Institución</label>
+                    <input type="text" class="form-control" id="institucion" name="institucion" [(ngModel)]="edu.institucion" required>
+                </div>
+                </div>
+                <div class="mb-3">
+                <div class="form-group">
+                    <label for= "periodo">Período</label>
+                    <input type="text" class="form-control" id="periodo" name="periodo" [(ngModel)]="edu.periodo" required>
+                </div>
+                </div>
+                <div class="mb-3">
+                <div class="form-group">
+                    <label for= "cursos">Cursos</label>
+                    <input type="text" class="form-control" id="cursos" name="cursos" [(ngModel)]="edu.cursos" required>
+                </div>
+                </div>
+                <div class="mb-3">
+                <div class="form-group">
+                    <label for= "urlLogoInst">URL Logo Institución Educativa</label>
+                    <input type="text" class="form-control" id="urlLogoInst" name="urlLogoInst" [(ngModel)]="edu.urlLogoInst" required>
+                </div>
+                </div>
+                <div class="mb-3">
+                <div class="form-group">
+                    <label for= "altImgInst">Alternativa Logo Institución Educativa</label>
+                    <input type="text" class="form-control" id="altImgInst" name="altImgInst" [(ngModel)]="edu.altImgInst" required>
+                </div>
+                </div>
+                <div class="mb-3">
+                <button class="btn btn-secondary">Editar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

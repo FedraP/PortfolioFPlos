@@ -34,11 +34,11 @@ import org.springframework.web.bind.annotation.RestController;
   
     
     @GetMapping ("/educacion/ver/{id}")
-    @ResponseBody
-    public void buscarEducacion(@PathVariable Long id){
-        iEduServ.buscarEducacion(id);
-    }        
-    
+    //@ResponseBody
+    public Educacion buscarEducacion(@PathVariable("id") Long id){
+        Educacion edu = iEduServ.buscarEducacion(id);
+        return edu;
+    }
       
     @GetMapping ("/educacion/ver/cursos")
     public Educacion buscarEducacion(){
@@ -46,9 +46,9 @@ import org.springframework.web.bind.annotation.RestController;
     }  
     
     @PostMapping ("/educacion/crear")
-    public String crearEducacion (@RequestBody Educacion edu){
+    public void crearEducacion (@RequestBody Educacion edu){
         iEduServ.crearEducacion(edu);
-        return "La educacion fue creada correctamente";
+        //return "La educacion fue creada correctamente";
     }
     
     @DeleteMapping ("/educacion/borrar/{id}")
@@ -60,8 +60,8 @@ import org.springframework.web.bind.annotation.RestController;
     
     @PutMapping ("/educacion/editar/{id}")
     
-    public String editarEducacion (@RequestBody Educacion edu){
+    public void editarEducacion (@RequestBody Educacion edu){
         iEduServ.editarEducacion(edu);
-        return "La educaicion fue modificada correctamente";
+        //return "La educaicion fue modificada correctamente";
     }
 }

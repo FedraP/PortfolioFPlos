@@ -1,0 +1,49 @@
+<div class="contenedorNuevaEdu container">
+    <div class="row my-auto px-4 d-flex">
+        <div>
+            <form (ngSubmit)="onCreate()" novalidate #f=""ngForm>
+                <div class="mb-3 mt-3">
+                <div class="form-group">
+                    <label for= "carrera">Carrera</label>
+                    <input type="text" class="form-control" id="carrera" name="carrera" [(ngModel)]="carrera" required>
+                </div>
+                </div>
+                <div class="mb-3">
+                <div class="form-group">
+                    <label for= "institucion">Institución</label>
+                    <input type="text" class="form-control" id="institucion" name="institucion" [(ngModel)]="institucion" required>
+                </div>
+                </div>
+                <div class="mb-3">
+                <div class="form-group">
+                    <label for= "periodo">Período</label>
+                    <input type="text" class="form-control" id="periodo" name="periodo" [(ngModel)]="periodo" required>
+                </div>
+                </div>
+                <div class="mb-3">
+                <div class="form-group">
+                    <p class="text-black-50 mb-3">Completar sólo si quiere cargar una lista de cursos </p>
+                    <label for= "cursos">Cursos</label>
+                    <input type="text" class="form-control" id="cursos" name="cursos" [(ngModel)]="cursos" required>
+                </div>
+                </div>
+                <div class="mb-3">
+                <div class="form-group">
+                    <label for= "urlLogoInst">URL Logo Institución Educativa</label>
+                    <input type="text" class="form-control" id="urlLogoInst" name="urlLogoInst" [(ngModel)]="urlLogoInst" required>
+                </div>
+                </div>
+                <div class="mb-3">
+                <div class="form-group">
+                    <label for= "altImgInst">Alternativa Logo Institución Educativa</label>
+                    <input type="text" class="form-control" id="altImgInst" name="altImgInst" [(ngModel)]="altImgInst" required>
+                </div>
+                </div>
+                <div class="mb-3">
+                <button class="btn btn-secondary">Agregar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
