@@ -3,7 +3,11 @@
     <div class="proyectos">
       <div class="icon-plus">
         <h3 class="pt-3">Proyectos</h3>
-        <a class="nav-link" href="#" *ngIf="isLogged" title="agregar"
+        <a
+          class="nav-link"
+          href="/nuevo-proyecto"
+          *ngIf="isLogged"
+          title="agregar"
           ><i
             class="icon-plus fa-solid fa-circle-plus"
             style="color: #3e4a5e"
@@ -14,26 +18,33 @@
     <div class="row">
       <div class="col-md-12">
         <div class="main-timeline">
-          <a href="#" class="timeline">
-            <div class="timeline-icon"><i class="fa-solid fa-globe"></i></div>
-            <li *ngFor="let proyecto of proyectosList">
-              <div class="timeline-content">
-                <div class="icon">
-                <h3 class="title">{{ proyecto.nombre }}</h3>
-                    <a class="nav-link" href="#" *ngIf="isLogged" title="editar"
+          <li *ngFor="let proyecto of proyectosList">
+            <div class="row">
+              <a href="#" class="timeline">
+                <div class="timeline-icon">
+                  <i class="fa-solid fa-globe"></i>
+                </div>
+                <div class="timeline-content">
+                  <div class="icon">
+                    <h3 class="title">{{proyecto.nombre}}</h3>
+                    <a class="nav-link" href="/editar-proyecto/{{proyecto.idProy}}"*ngIf="isLogged" title="editar"
                       ><i class="fa-solid fa-pen" style="color: #3e4a5e"></i
                     ></a>
-                    <a class="nav-link" href="#" *ngIf="isLogged" title="borrar"
-                      ><i class="fa-solid fa-trash-can" style="color: #3e4a5e"></i
+                    <a class="nav-link" href="#" *ngIf="isLogged" (click)= "borrar(proyecto.idProy)" title="borrar"
+                      ><i
+                        class="fa-solid fa-trash-can"
+                        style="color: #3e4a5e"
+                      ></i
                     ></a>
                   </div>
-                <p class="description">
-                  {{ proyecto.descripcion }}
-                  <!-- 2022 - Desarrollo de una aplicación web full stack para Argentina programa #YoProgramo, que muestre el propio portfolio web a traves de una aplicación de arquitectura distribuida. -->
-                </p>
-              </div>
-            </li>
-          </a>
+                  <p class="description">
+                    {{ proyecto.descripcion }}
+                    <!-- 2022 - Desarrollo de una aplicación web full stack para Argentina programa #YoProgramo, que muestre el propio portfolio web a traves de una aplicación de arquitectura distribuida. -->
+                  </p>
+                </div>
+              </a>
+            </div>
+          </li>
         </div>
       </div>
     </div>

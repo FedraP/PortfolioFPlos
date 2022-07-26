@@ -36,7 +36,7 @@ export class EditarHabilidadComponent implements OnInit {
         alert("La habilidad fue modificada correctamente");
         this.router.navigate(['']);
       }, err => {
-        alert('Error al modificar experiencia');
+        alert('Error al modificar habilidad');
         this.router.navigate(['']);
       }
     )

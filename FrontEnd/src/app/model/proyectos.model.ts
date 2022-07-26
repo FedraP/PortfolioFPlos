@@ -1,6 +1,6 @@
 export class proyectos {
 
-    id?: number;
+    idProy?: number;
     nombre: String;
     descripcion: String;
     urlProyecto: String;

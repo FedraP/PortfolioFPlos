@@ -22,15 +22,31 @@ export class ProyectosComponent implements OnInit {
   isLogged = false;
 
   ngOnInit(): void {
-    this.datosProyectos.traerProyectos().subscribe(datos =>{
-      this.proyectosList = datos;
-      console.log(datos);
-    });
-
+    
+    this.cargarProyecto();
     if(this.tokenService.getToken()){
       this.isLogged = true;
     }else{
       this.isLogged = false;
+    }
+  }
+
+  cargarProyecto(): void{
+      this.datosProyectos.traerProyectos().subscribe(datos =>{
+      this.proyectosList = datos;
+      console.log(datos);
+    });
+  }
+
+  borrar(id?: number){
+    if(id != undefined){
+      this.datosProyectos.borrarProy(id).subscribe(
+        data =>{
+          this.cargarProyecto();
+        }, err =>{
+          alert(" No se pudo borrar el proyecto");
+        }
+      )
     }
   }
 
