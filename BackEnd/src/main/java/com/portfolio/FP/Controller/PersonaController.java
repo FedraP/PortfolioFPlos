@@ -38,9 +38,10 @@ public class PersonaController {
     }
     
     @GetMapping ("/persona/ver/{id}")
-    @ResponseBody
-    public Persona buscarPersona(@PathVariable Long id){
-        return iPersoServ.buscarPersona(id);
+    //@ResponseBody
+    public Persona buscarPersona(@PathVariable("id") Long id){
+        Persona per = iPersoServ.buscarPersona(id);
+        return per;
         
     }
     
@@ -51,9 +52,9 @@ public class PersonaController {
     
     @PreAuthorize("hasRole('ADMIN')")
     @PostMapping ("/persona/crear")
-    public String crearPersona (@RequestBody Persona perso){
+    public void crearPersona (@RequestBody Persona perso){
         iPersoServ.crearPersona(perso);
-        return "La persona fue creada correctamente";
+        //return "La persona fue creada correctamente";
     }
     
     @PreAuthorize("hasRole('ADMIN')")
@@ -65,8 +66,8 @@ public class PersonaController {
     
     @PreAuthorize("hasRole('ADMIN')")
     @PutMapping ("/persona/editar/{id}")
-    public String editarPersona (@RequestBody Persona perso){
+    public void editarPersona (@RequestBody Persona perso){
         iPersoServ.editarPersona(perso);
-        return "La persona fue modificada correctamente";
+       // return "La persona fue modificada correctamente";
     }
 }

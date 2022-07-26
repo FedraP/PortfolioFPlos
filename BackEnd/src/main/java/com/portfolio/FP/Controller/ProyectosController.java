@@ -33,15 +33,16 @@ public class ProyectosController {
     }
     
     @GetMapping ("/proyectos/ver/{id}")
-    @ResponseBody
-    public Proyectos buscarProyecto(@PathVariable Long id){
-        return iProyServ.buscarProyecto(id);
+    //@ResponseBody
+    public Proyectos buscarProyecto(@PathVariable("id") Long id){
+        Proyectos proy = iProyServ.buscarProyecto(id);
+        return proy;
     }
     
     @PostMapping ("/proyectos/crear")
-    public String crearProyecto (@RequestBody Proyectos proy){
+    public void crearProyecto (@RequestBody Proyectos proy){
         iProyServ.crearProyecto(proy);
-        return "El proyecto fue creado correctamente";
+        //return "El proyecto fue creado correctamente";
     }
     
     @DeleteMapping ("/proyectos/borrar/{id}")
@@ -53,9 +54,9 @@ public class ProyectosController {
     
     @PutMapping ("/proyectos/editar/{id}")
     
-    public String editarProyecto (@RequestBody Proyectos proy){
+    public void editarProyecto (@RequestBody Proyectos proy){
         iProyServ.editarProyecto(proy);
-        return "El proyecto fue modificado correctamente";
+        //return "El proyecto fue modificado correctamente";
     }
     
     

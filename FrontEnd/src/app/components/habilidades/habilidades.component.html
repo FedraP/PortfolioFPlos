@@ -1,19 +1,17 @@
 <div class="contenedorHabilidades container">
   <div class="tabla my-auto px-4">
     <div class="habilidades">
-      <h3 class="pt-3">Habilidades Profesionales</h3>
-      <div class="icon">
-        <a class="nav-link" href="#" *ngIf="isLogged" title="agregar"
+      <div class="icon-plus">
+        <h3 class="pt-3">Habilidades Profesionales</h3>
+        <a
+          class="nav-link"
+          href="/nueva-habilidad"
+          *ngIf="isLogged"
+          title="agregar"
           ><i
             class="icon-plus fa-solid fa-circle-plus"
             style="color: #3e4a5e"
           ></i
-        ></a>
-        <a class="nav-link" href="#" *ngIf="isLogged" title="editar"
-          ><i class="fa-solid fa-pen" style="color: #3e4a5e"></i
-        ></a>
-        <a class="nav-link" href="#" *ngIf="isLogged" title="borrar"
-          ><i class="fa-solid fa-trash-can" style="color: #3e4a5e"></i
         ></a>
       </div>
     </div>
@@ -23,7 +21,33 @@
           <li *ngFor="let habilidadT of habilidadesList">
             <div class="mb-2">
               <div *ngIf="habilidadT.tipo === 'tecnica'">
-                <span>{{ habilidadT.nombre }}</span>
+                <div class="row">
+                  <div class="col-6">
+                    <span>{{ habilidadT.nombre }}</span>
+                  </div>
+                  <div class="col-6">
+                    <div class="icon text-end">
+                      <a
+                        class="nav-link"
+                        href="/editar-habilidad/{{ habilidadT.idHabi }}"
+                        *ngIf="isLogged"
+                        title="editar"
+                        ><i class="fa-solid fa-pen" style="color: #3e4a5e"></i
+                      ></a>
+                      <a
+                        class="nav-link"
+                        href="#"
+                        *ngIf="isLogged"
+                        (click)= "borrar(habilidadT.idHabi)"
+                        title="borrar"
+                        ><i
+                          class="fa-solid fa-trash-can"
+                          style="color: #3e4a5e"
+                        ></i
+                      ></a>
+                    </div>
+                  </div>
+                </div>
                 <div class="my-1">
                   <ngb-progressbar
                     type="primary"
@@ -38,7 +62,33 @@
           <li *ngFor="let habilidadP of habilidadesList">
             <div class="mb-2">
               <div *ngIf="habilidadP.tipo === 'personal'">
-                <span>{{ habilidadP.nombre }}</span>
+                <div class="row">
+                  <div class="col-6">
+                    <span>{{ habilidadP.nombre }}</span>
+                  </div>
+                  <div class="col-6">
+                    <div class="icon text-end">
+                      <a
+                        class="nav-link"
+                        href="/editar-habilidad/{{ habilidadP.idHabi }}"
+                        *ngIf="isLogged"
+                        title="editar"
+                        ><i class="fa-solid fa-pen" style="color: #3e4a5e"></i
+                      ></a>
+                      <a
+                        class="nav-link"
+                        href="#"
+                        *ngIf="isLogged"
+                        (click)= "borrar(habilidadP.idHabi)"
+                        title="borrar"
+                        ><i
+                          class="fa-solid fa-trash-can"
+                          style="color: #3e4a5e"
+                        ></i
+                      ></a>
+                    </div>
+                  </div>
+                </div>
                 <div class="my-1">
                   <ngb-progressbar
                     type="success"

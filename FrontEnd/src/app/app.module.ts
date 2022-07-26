@@ -28,6 +28,8 @@ import { NuevaExperienciaComponent } from './components/experiencia/nueva-experi
 import { EditarExperienciaComponent } from './components/experiencia/editar-experiencia.component';
 import { NuevaEducacionComponent } from './components/educacion/nueva-educacion.component';
 import { EditarEducacionComponent } from './components/educacion/editar-educacion.component';
+import { NuevaHabilidadComponent } from './components/habilidades/nueva-habilidad.component';
+import { EditarHabilidadComponent } from './components/habilidades/editar-habilidad.component';
 
 
 
@@ -51,6 +53,8 @@ import { EditarEducacionComponent } from './components/educacion/editar-educacio
     EditarExperienciaComponent,
     NuevaEducacionComponent,
     EditarEducacionComponent,
+    NuevaHabilidadComponent,
+    EditarHabilidadComponent,
   ],
   imports: [
     BrowserModule,

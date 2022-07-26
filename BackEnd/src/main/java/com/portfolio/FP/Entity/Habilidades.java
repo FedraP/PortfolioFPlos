@@ -22,18 +22,18 @@ public class Habilidades {
     private Integer valor;
     private String tipo;
     
-    @ManyToOne
-    private Persona persona;
+   // @ManyToOne
+   // private Persona persona;
 
     public Habilidades() {
     }
 
-    public Habilidades(Long idHabi, String nombre, Integer valor, String tipo, Persona persona) {
+    public Habilidades(Long idHabi, String nombre, Integer valor, String tipo) {
         this.idHabi = idHabi;
         this.nombre = nombre;
         this.valor = valor;
         this.tipo = tipo;
-        this.persona = persona;
+        //this.persona = persona;
     }
 
 }

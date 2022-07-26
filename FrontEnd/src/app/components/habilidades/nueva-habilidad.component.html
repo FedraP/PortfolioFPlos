@@ -1,0 +1,33 @@
+<div class="contenedorNuevaHabi container">
+    <div class="row my-auto px-4 d-flex">
+        <div>
+            <form (ngSubmit)="onCreate()" novalidate #f=""ngForm>
+                <div class="mb-3 mt-3">
+                <div class="form-group">
+                    <label for= "nombre">Habilidad</label>
+                    <input type="text" class="form-control" id="nombre" name="nombre" [(ngModel)]="nombre" required>
+                </div>
+                </div>
+                <div class="mb-3">
+                <div class="form-group">
+                    <label for= "valor">Valor dominio de la habilidad</label>
+                    <input type="text" class="form-control" id="valor" name="valor" [(ngModel)]="valor" required>
+                </div>
+                </div>
+                <div class="mb-3">
+                <div class="form-group">
+                    <label for= "tipo">Tipo de habilidad</label>
+                    <select class="form-group" name= "tipo" (change)="selectTipo()" [(ngModel)]="tipo" required>
+                    <option  *ngFor="let item of lista" [ngValue]="item">{{item}}</option>
+                    <input class="form-control" name="tipo" type="text"  id="tipo"  [(ngModel)]="unTipo" required>    
+                </select>
+                </div>
+                </div>
+                <div class="mb-3">
+                <button class="btn btn-secondary"> Agregar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+

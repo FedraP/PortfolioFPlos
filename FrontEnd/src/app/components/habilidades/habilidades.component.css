@@ -18,13 +18,28 @@ li {
     list-style-type:none
 }
 
+span {
+    vertical-align: middle;
+    align-items:center;
+}
+
 .icon {
     display: flex;
     margin-right: 10px;
+    align-items:center;
+    vertical-align: middle;
+    justify-content:flex-end;
   }
 
-  .habilidades {
+.habilidades {
     display: flex;
     align-items: center;
     justify-content: space-between;
 } 
+
+.icon-plus {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin-top: 10px;
+  }

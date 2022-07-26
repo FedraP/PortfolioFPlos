@@ -1,0 +1,16 @@
+.contenedorNuevaHabi {
+    background-color:transparent;
+    display: flex;
+    border-radius: 10px!important;
+    border-color: rgb(122, 139, 156);
+    border-width: 2px;
+    border-style: solid;
+    min-height: 300px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    max-width: 800px;
+}
+
+.form-group {
+    min-width: 725px;
+}

@@ -1,0 +1,32 @@
+<div class="contenedorEditarHabi container" *ngIf = "habi">
+    <div class="row my-auto px-4 d-flex">
+        <div>
+            <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+                <div class="mb-3 mt-3">
+                <div class="form-group">
+                    <label for= "nombre">Habilidad</label>
+                    <input type="text" class="form-control" id="nombre" name="nombre" [(ngModel)]="habi.nombre" required>
+                </div>
+                </div>
+                <div class="mb-3">
+                <div class="form-group">
+                    <label for= "valor">Valor dominio de la habilidad</label>
+                    <input type="text" class="form-control" id="valor" name="valor" [(ngModel)]="habi.valor" required>
+                </div>
+                </div>
+                <div class="mb-3">
+                <div class="form-group">
+                    <label for= "tipo">Tipo de habilidad</label>
+                    <p style="color: gray"><i>Seleccione tecnica o personal</i></p>
+                    <input type="text" class="form-control" id="tipo" name="tipo" [(ngModel)]="habi.tipo" required>
+                </div>
+                </div>
+                <div class="mb-3">
+                <button class="btn btn-secondary">Editar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+

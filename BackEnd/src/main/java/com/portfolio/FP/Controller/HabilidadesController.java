@@ -33,29 +33,28 @@ public class HabilidadesController {
     }
     
     @GetMapping ("/habilidades/ver/{id}")
-    @ResponseBody
-    public Habilidades buscarHabilidad(@PathVariable Long id){
-        return iHabiServ.buscarHabilidad(id);
+    //@ResponseBody
+    public Habilidades buscarHabilidad(@PathVariable("id") Long id){
+        Habilidades habi = iHabiServ.buscarHabilidad(id);
+        return habi;
     }
     
     @PostMapping ("/habilidades/crear")
-    public String crearHabilidad (@RequestBody Habilidades habi){
+    public void crearHabilidad (@RequestBody Habilidades habi){
         iHabiServ.crearHabilidad(habi);
-        return "La habilidad fue creada correctamente";
+        //return "La habilidad fue creada correctamente";
     }
     
     @DeleteMapping ("/habilidades/borrar/{id}")
-    
-    public String borrarHabilidad(@PathVariable Long id){
+    public void borrarHabilidad(@PathVariable Long id){
         iHabiServ.borrarHabilidad(id);
-        return "La habilidad fue eliminada correctamente";
+        //return "La habilidad fue eliminada correctamente";
     }
     
     @PutMapping ("/habilidades/editar/{id}")
-    
-    public String editarHabilidad (@RequestBody Habilidades habi){
+    public void editarHabilidad (@RequestBody Habilidades habi){
         iHabiServ.editarHabilidad(habi);
-        return "La habilidad fue modificada correctamente";
+        //return "La habilidad fue modificada correctamente";
     }
     
 }

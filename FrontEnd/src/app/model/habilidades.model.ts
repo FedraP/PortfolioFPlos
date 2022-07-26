@@ -1,6 +1,6 @@
 export class habilidades {
 
-    id?: number;
+    idHabi?: number;
     nombre: String;
     valor: number;
     tipo: String;
