@@ -1,0 +1,36 @@
+<div class="contenedorEditarDatosPer container" *ngIf = "persona">
+    <div class="row my-auto px-4 d-flex">
+        <div>
+            <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+                <div class="mb-3 mt-3">
+                <div class="form-group">
+                    <label for= "presentacion">Presentación</label>
+                    <input type="text" class="form-control" id="presentacion" name="presentacion" [(ngModel)]="persona.presentacion" required>
+                </div>
+                </div>
+                <div class="mb-3">
+                <div class="form-group">
+                    <label for= "email">Correo electrónico</label>
+                    <input type="text" class="form-control" id="email" name="email" [(ngModel)]="persona.email" required>
+                </div>
+                </div>
+                <div class="mb-3">
+                <div class="form-group">
+                    <label for= "direccion">Dirección</label>
+                    <input type="text" class="form-control" id="direccion" name="direccion" [(ngModel)]="persona.direccion" required>
+                </div>
+                </div>
+                <div class="mb-3">
+                <div class="form-group">
+                    <label for= "telefono">Teléfono</label>
+                    <input type="text" class="form-control" id="telefono" name="telefono" [(ngModel)]="persona.telefono"  required>
+                </div>
+                </div>
+                <div class="mb-3">
+                <button class="btn btn-secondary">Editar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+

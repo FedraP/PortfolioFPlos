@@ -50,21 +50,21 @@ public class PersonaController {
         return iPersoServ.buscarPersona((long)1);
      }
     
-    @PreAuthorize("hasRole('ADMIN')")
+    //@PreAuthorize("hasRole('ADMIN')")
     @PostMapping ("/persona/crear")
     public void crearPersona (@RequestBody Persona perso){
         iPersoServ.crearPersona(perso);
         //return "La persona fue creada correctamente";
     }
     
-    @PreAuthorize("hasRole('ADMIN')")
+    //@PreAuthorize("hasRole('ADMIN')")
     @DeleteMapping ("/persona/borrar/{id}")
     public String borrarPersona(@PathVariable Long id){
         iPersoServ.borrarPersona(id);
         return "La persona fue eliminada correctamente";
     }
     
-    @PreAuthorize("hasRole('ADMIN')")
+    //@PreAuthorize("hasRole('ADMIN')")
     @PutMapping ("/persona/editar/{id}")
     public void editarPersona (@RequestBody Persona perso){
         iPersoServ.editarPersona(perso);

@@ -19,12 +19,12 @@ export class EditarEducacionComponent implements OnInit {
     // console.log('Traer data', id);
     this.datosEducacion.verEducacion(id).subscribe(
       data => {
-        console.log("Data: ", id, data);
+        //console.log("Data: ", id, data);
         this.edu = data;
         
       }, err =>{
         alert('Error al modificar experiencia');
-        console.log('Error editar',err);
+        //console.log('Error editar',err);
         this.router.navigate(['']);
       }
     )
