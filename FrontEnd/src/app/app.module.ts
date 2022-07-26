@@ -32,6 +32,7 @@ import { NuevaHabilidadComponent } from './components/habilidades/nueva-habilida
 import { EditarHabilidadComponent } from './components/habilidades/editar-habilidad.component';
 import { NuevoProyectoComponent } from './components/proyectos/nuevo-proyecto.component';
 import { EditarProyectoComponent } from './components/proyectos/editar-proyecto.component';
+import { EditarAcercaDeComponent } from './components/acerca-de/editar-acerca-de.component';
 
 
 
@@ -59,6 +60,7 @@ import { EditarProyectoComponent } from './components/proyectos/editar-proyecto.
     EditarHabilidadComponent,
     NuevoProyectoComponent,
     EditarProyectoComponent,
+    EditarAcercaDeComponent,
   ],
   imports: [
     BrowserModule,

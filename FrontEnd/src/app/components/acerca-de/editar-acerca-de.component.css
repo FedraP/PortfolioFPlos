@@ -1,0 +1,15 @@
+.contenedorEditarAcercaDe {
+    background-color:transparent;
+    display: flex;
+    border-radius: 10px!important;
+    border-color: rgb(122, 139, 156);
+    border-width: 2px;
+    border-style: solid;
+    min-height: 200px;
+    margin-top: 5px;
+}
+
+.form-group {
+    min-width: 1245px;
+    min-height: 200px;
+}

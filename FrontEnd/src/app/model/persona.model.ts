@@ -1,6 +1,6 @@
 export class persona {
 
-    id?: number;
+    idPer?: number;
     nombre: String;
     apellido: String;
     direccion: String;

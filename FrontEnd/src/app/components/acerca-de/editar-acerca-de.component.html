@@ -1,0 +1,22 @@
+<div class="contenedorEditarAcercaDe container" *ngIf = "persona">
+    <div class="row my-auto px-4 d-flex">
+        <div>
+            <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+                <div class="mb-3 mt-3">
+                <div class="form-group">
+                    <label for= "acercaDe">Acerca de mi</label>
+                    <textarea type="acercaDe" class="form-control" rows="6" id="acercaDe" name="acercaDe" [(ngModel)]="persona.acercaDe" required>
+                    </textarea>
+                    </div>
+                </div>
+                <div class="mb-3">
+                <button class="btn btn-secondary">Editar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
+

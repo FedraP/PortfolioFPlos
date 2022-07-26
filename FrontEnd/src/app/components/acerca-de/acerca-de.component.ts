@@ -22,19 +22,25 @@ export class AcercaDeComponent implements OnInit {
   isLogged = false;
 
   ngOnInit(): void {
-    this.datosPersona.getPersona().subscribe(datos =>{
-    this.persona = datos;
-    this.acerca_DeList = datos.acercaDe.split("\n");
-    console.log(this.acerca_DeList);
-    console.log(datos.acercaDe)});
-
+    
+    this.cargarPersona();
     if(this.tokenService.getToken()){
       this.isLogged = true;
     }else{
       this.isLogged = false;
     }
+  }
 
-  };
+  cargarPersona():void{
+    this.datosPersona.getPersona().subscribe(datos =>{
+    this.persona = datos;
+    this.acerca_DeList = datos.acercaDe.split("\n");
+    console.log(this.acerca_DeList);
+      //console.log(datos.acercaDe);
+    });
+  }
+}
+
 
   
 
@@ -48,5 +54,3 @@ export class AcercaDeComponent implements OnInit {
   //     this.miPortfolio =datos;
   //   });
   // }
-
-}
