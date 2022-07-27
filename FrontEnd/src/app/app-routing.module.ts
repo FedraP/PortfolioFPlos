@@ -4,6 +4,7 @@ import { EditarAcercaDeComponent } from './components/acerca-de/editar-acerca-de
 import { EditarDatosPersonalesComponent } from './components/datos-personales/editar-datos-personales.component';
 import { EditarEducacionComponent } from './components/educacion/editar-educacion.component';
 import { NuevaEducacionComponent } from './components/educacion/nueva-educacion.component';
+import { EditarEncabezadoComponent } from './components/encabezado/editar-encabezado.component';
 import { EditarExperienciaComponent } from './components/experiencia/editar-experiencia.component';
 import { NuevaExperienciaComponent } from './components/experiencia/nueva-experiencia.component';
 import { EditarHabilidadComponent } from './components/habilidades/editar-habilidad.component';
@@ -28,6 +29,7 @@ const routes: Routes = [
   {path: 'editar-proyecto/:id', component: EditarProyectoComponent},
   {path: 'editar-acerca-de/:id', component: EditarAcercaDeComponent},
   {path: 'editar-datos-personales/:id', component: EditarDatosPersonalesComponent},
+  {path: 'editar-encabezado/:id', component: EditarEncabezadoComponent},
 ];
 
 @NgModule({

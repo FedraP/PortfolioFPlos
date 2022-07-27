@@ -1,0 +1,43 @@
+<div class="contenedorEditarEncabezado container" *ngIf = "persona">
+    <div class="row my-auto px-4 d-flex">
+        <div>
+            <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+                <div class="mb-3 mt-3">
+                <div class="form-group">
+                    <label for= "nombre">Nombre</label>
+                    <input type="text" class="form-control" id="nombre" name="nombre" [(ngModel)]="persona.nombre" required>
+                </div>
+                </div>
+                <div class="mb-3">
+                <div class="form-group">
+                    <label for= "apellido">Apellido</label>
+                    <input type="text" class="form-control" id="apellido" name="apellido" [(ngModel)]="persona.apellido" required>
+                </div>
+                </div>
+                <div class="mb-3">
+                <div class="form-group">
+                    <label for= "titulo">Título</label>
+                    <input type="text" class="form-control" id="titulo" name="titulo" [(ngModel)]="persona.titulo" required>
+                </div>
+                </div>
+                <div class="mb-3">
+                <div class="form-group">
+                    <label for= "url_avatar">URL Foto ávatar</label>
+                    <input type="text" class="form-control" id="url_avatar" name="url_avatar" [(ngModel)]="persona.url_avatar"  required>
+                </div>
+                </div>
+                <div class="mb-3">
+                    <div class="form-group">
+                        <label for= "urlFondo">URL Foto de fondo</label>
+                        <input type="text" class="form-control" id="urlFondo" name="urlFondo" [(ngModel)]="persona.url_fondo"  required>
+                    </div>
+                    </div>
+                <div class="mb-3">
+                <button class="btn btn-secondary">Editar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+

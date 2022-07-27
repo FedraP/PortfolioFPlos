@@ -1,12 +1,18 @@
 <div class="contenedorEncabezado container">
+  <img src="/assets/Fondo2.jpg" class="fondo">
+</div>
   <div class="row">
-    <div class="avatar"></div>
+    <div>
+      <img 
+      class="avatar"
+      src= "/assets/Foto.jpg">
+    </div>
     <div class="nombre">
       <h2 data-aos="fade-left" data-aos-delay="50">
         {{ persona?.nombre }} {{ persona?.apellido }}
       </h2>
       <div class="icon">
-      <a  href="#" *ngIf="isLogged" title="editar">
+      <a  href="/editar-encabezado/{{persona.idPer}}" *ngIf="isLogged" title="editar">
         <i class="fa-solid fa-pen" style="color: #3e4a5e"></i>
       </a>
     </div>
@@ -15,4 +21,4 @@
       {{ persona?.titulo }}
     </p>
   </div>
-</div>
+

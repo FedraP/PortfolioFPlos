@@ -34,7 +34,7 @@ export class ProyectosComponent implements OnInit {
   cargarProyecto(): void{
       this.datosProyectos.traerProyectos().subscribe(datos =>{
       this.proyectosList = datos;
-      console.log(datos);
+      // console.log(datos);
     });
   }
 

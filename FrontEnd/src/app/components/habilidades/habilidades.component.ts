@@ -37,7 +37,7 @@ export class HabilidadesComponent implements OnInit {
   cargarHabilidad():void{
     this.datosHabilidad.traerHabilidades().subscribe(datos =>{
       this.habilidadesList = datos;
-      console.log(datos);
+      // console.log(datos);
     });
   }
 

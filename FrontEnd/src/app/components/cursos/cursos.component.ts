@@ -21,7 +21,7 @@ export class CursosComponent implements OnInit {
     this.datosCursos.traerCurso().subscribe(datos =>{
       this.curso = datos;
       this.cursosList = datos;
-      console.log(this.cursosList);
+      // console.log(this.cursosList);
 
     });
   }
