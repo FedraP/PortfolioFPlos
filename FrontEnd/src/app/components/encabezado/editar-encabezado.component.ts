@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { persona } from 'src/app/model/persona.model';
 import { PersonaService } from 'src/app/servicios/persona.service';
+import { Storage, ref, uploadBytes, listAll, getDownloadURL} from '@angular/fire/storage';
 
 @Component({
   selector: 'app-editar-encabezado',
@@ -11,8 +12,9 @@ import { PersonaService } from 'src/app/servicios/persona.service';
 export class EditarEncabezadoComponent implements OnInit {
 
   persona: persona = null;
+  urlImg: Array<string> = [];
   
-  constructor(private datosPersona: PersonaService, private activatedRouter: ActivatedRoute, private router: Router) { }
+  constructor(private datosPersona: PersonaService, private activatedRouter: ActivatedRoute, private router: Router, private storage: Storage) { }
 
   ngOnInit(): void {
     const id = this.activatedRouter.snapshot.params['id'];
@@ -28,6 +30,7 @@ export class EditarEncabezadoComponent implements OnInit {
         this.router.navigate(['']);
       }
     )
+    // this.getImagenes();
   }
 
   onUpdate(): void{
@@ -41,6 +44,42 @@ export class EditarEncabezadoComponent implements OnInit {
         this.router.navigate(['']);
       }
     )
+  }
+
+  cargarImagen($event: any){
+    const file = $event.target.files[0];
+    console.log(file);
+
+    const imgRef = ref(this.storage, `imagen/${file.name}`);
+
+    uploadBytes(imgRef, file)
+    .then(async response => {
+      console.log(response);
+     
+    })
+      
+    .catch(error => console.log(error));
+    this.getImagenes();
+  }
+
+  getImagenes(){
+    const imagenRef = ref(this.storage, 'imagen');
+
+    listAll(imagenRef)
+    .then(async response => {
+      console.log(response);
+
+      
+
+      for (let item of response.items){
+        const urlImg = await getDownloadURL(item);
+        console.log(urlImg);
+      }
+
+      
+    })
+    .catch(error => console.log(error));
+    
   }
 
 }

@@ -35,6 +35,9 @@ import { EditarProyectoComponent } from './components/proyectos/editar-proyecto.
 import { EditarAcercaDeComponent } from './components/acerca-de/editar-acerca-de.component';
 import { EditarDatosPersonalesComponent } from './components/datos-personales/editar-datos-personales.component';
 import { EditarEncabezadoComponent } from './components/encabezado/editar-encabezado.component';
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { provideStorage,getStorage } from '@angular/fire/storage';
 
 
 
@@ -72,7 +75,9 @@ import { EditarEncabezadoComponent } from './components/encabezado/editar-encabe
     AppRoutingModule,
     ReactiveFormsModule,
     NgbModule,
-    FormsModule
+    FormsModule,
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideStorage(() => getStorage())
   ],
   providers: [PersonaService, EducacionService, ExperienciaService, interceptorProvider],
   bootstrap: [AppComponent],

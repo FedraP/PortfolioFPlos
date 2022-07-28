@@ -22,14 +22,16 @@
                 </div>
                 <div class="mb-3">
                 <div class="form-group">
-                    <label for= "url_avatar">URL Foto ávatar</label>
-                    <input type="text" class="form-control" id="url_avatar" name="url_avatar" [(ngModel)]="persona.url_avatar"  required>
+                    <label for= "urlAvatar">Foto ávatar</label>
+                    <input type="file" class="form-control" (change)="cargarImagen($event)" id="urlAvatar" name="urlAvatar" [(ngModel)]="persona.urlAvatar">
+                    <!-- <input type="text" class="form-control" id="urlAvatar" name="urlAvatar" [(ngModel)]="persona.urlAvatar"  required> -->
                 </div>
+                
                 </div>
                 <div class="mb-3">
                     <div class="form-group">
                         <label for= "urlFondo">URL Foto de fondo</label>
-                        <input type="text" class="form-control" id="urlFondo" name="urlFondo" [(ngModel)]="persona.url_fondo"  required>
+                        <input type="text" class="form-control" id="urlFondo" name="urlFondo" [(ngModel)]="persona.urlFondo"  required>
                     </div>
                     </div>
                 <div class="mb-3">

@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.portfolio.FP.Interface.IRedesService;
 
 @RestController
-@CrossOrigin (origins = "http://localhost:4200")
+@CrossOrigin (origins = "*")
 public class RedesController {
     
     private final IRedesService iRedServ;

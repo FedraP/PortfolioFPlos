@@ -10,8 +10,8 @@ export class persona {
     presentacion: String;
     titulo: String;
     acercaDe: String;
-    url_avatar: String;
-    url_fondo: String;
+    urlAvatar: String;
+    urlFondo: String;
 
     constructor (nombre: String,
         apellido: String,
@@ -22,8 +22,8 @@ export class persona {
         presentacion: String,
         titulo: String,
         acercaDe: String,
-        url_avatar: String,
-        url_fondo: String){
+        urlAvatar: String,
+        urlFondo: String){
 
             this.nombre = nombre;
             this.apellido = apellido;
@@ -34,8 +34,8 @@ export class persona {
             this.presentacion = presentacion;
             this.titulo = titulo;
             this.acercaDe = acercaDe
-            this.url_avatar = url_avatar;
-            this.url_fondo = url_fondo;
+            this.urlAvatar = urlAvatar;
+            this.urlFondo = urlFondo;
         }
 
 }
