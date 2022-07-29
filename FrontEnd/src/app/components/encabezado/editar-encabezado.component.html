@@ -23,8 +23,9 @@
                 <div class="mb-3">
                 <div class="form-group">
                     <label for= "urlAvatar">Foto ávatar</label>
-                    <input type="file" class="form-control" (change)="cargarImagen($event)" id="urlAvatar" name="urlAvatar" [(ngModel)]="persona.urlAvatar">
-                    <!-- <input type="text" class="form-control" id="urlAvatar" name="urlAvatar" [(ngModel)]="persona.urlAvatar"  required> -->
+                    <input type="text" class="form-control" id="urlAvatar" name="urlAvatar" [(ngModel)]="persona.urlAvatar"  required>
+                    <input type="file" accept =".png, .jpg, .jpeg" multiple (change)="subirImagenAvatar($event)">
+                    
                 </div>
                 
                 </div>
@@ -32,6 +33,7 @@
                     <div class="form-group">
                         <label for= "urlFondo">URL Foto de fondo</label>
                         <input type="text" class="form-control" id="urlFondo" name="urlFondo" [(ngModel)]="persona.urlFondo"  required>
+                        <input type="file" accept =".png, .jpg, .jpeg" multiple (change)="subirImagenFondo($event)">
                     </div>
                     </div>
                 <div class="mb-3">

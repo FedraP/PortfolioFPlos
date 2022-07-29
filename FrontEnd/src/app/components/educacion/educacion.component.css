@@ -61,3 +61,8 @@ p {
     align-items: center;
     justify-content: space-between;
 } 
+
+img{
+    width: 200px;
+    height:auto;
+}

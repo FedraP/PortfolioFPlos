@@ -17,6 +17,7 @@ export class ExperienciaComponent implements OnInit {
   
   descripcionList: any;
   experienciaList: any;
+  experienciaListInvert: any;
 
   constructor(private datosExperiencia: ExperienciaService, private tokenService: TokenService ) { }
   isLogged = false;
@@ -36,6 +37,7 @@ export class ExperienciaComponent implements OnInit {
     this.datosExperiencia.traerExperiencia().subscribe(datos =>{
     this.experiencia = datos;
     this.experienciaList = datos;
+    // this.experienciaListInvert = this.experienciaList.reverse();
     })
   }
 

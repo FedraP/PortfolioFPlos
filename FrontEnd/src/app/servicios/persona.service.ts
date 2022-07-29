@@ -9,6 +9,7 @@ import { persona } from '../model/persona.model';
 export class PersonaService {
 
   URL ='http://localhost:8080/persona/' 
+  filePath: string;
 
   constructor(private http:HttpClient) {}
 
@@ -33,5 +34,5 @@ export class PersonaService {
    public borrarPer(id: number): Observable<any>{
      return this.http.delete<any>(this.URL + `borrar/${id}`);
    }
-   
+
 }
