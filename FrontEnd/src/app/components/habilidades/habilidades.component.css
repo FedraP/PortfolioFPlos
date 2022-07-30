@@ -12,6 +12,7 @@
 
 .tabla{
     width: 100%;
+    align-items: center;
 }
 
 li {
@@ -19,15 +20,17 @@ li {
 }
 
 span {
+    /* display: table-row; */
     vertical-align: middle;
     align-items:center;
 }
 
 .icon {
     display: flex;
+    /* position: relative; */
     margin-right: 10px;
     align-items:center;
-    vertical-align: middle;
+    /* vertical-align: middle; */
     justify-content:flex-end;
   }
 
@@ -35,6 +38,7 @@ span {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    vertical-align: middle;
 } 
 
 .icon-plus {

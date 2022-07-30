@@ -36,6 +36,7 @@ public class Usuario {
     
     @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(name = "usurario_rol", joinColumns = @JoinColumn(name = "usuario_id"), inverseJoinColumns = @JoinColumn (name = "rol_id"))
+    
     private Set<Rol> roles = new HashSet<>();
 
     public Usuario() {
@@ -69,7 +70,7 @@ public class Usuario {
     }
 
     public Set<Rol> getRoles() {
-        return roles;
+       return roles;
     }
 
     public void setId(Long id) {
@@ -92,9 +93,9 @@ public class Usuario {
         this.password = password;
     }
 
-    public void setRoles(Set<Rol> roles) {
-        this.roles = roles;
-    }
+    //public void setRoles(Set<Rol> roles) {
+    //    this.roles = roles;
+    //}
     
     
     }
