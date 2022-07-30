@@ -37,7 +37,7 @@ export class ExperienciaComponent implements OnInit {
     this.datosExperiencia.traerExperiencia().subscribe(datos =>{
     this.experiencia = datos;
     this.experienciaList = datos;
-    // this.experienciaListInvert = this.experienciaList.reverse();
+    this.experienciaListInvert = this.experienciaList.reverse();
     })
   }
 
