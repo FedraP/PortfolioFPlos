@@ -46,6 +46,7 @@ export class HabilidadesComponent implements OnInit {
       this.datosHabilidad.borrarHabi(id).subscribe(
         data =>{
           this.cargarHabilidad();
+          alert("La habilidad fue borrada correctamente");
         }, err =>{
           alert(" No se pudo borrar la habilidad");
         }

@@ -20,17 +20,19 @@
         <div class="main-timeline">
           <li *ngFor="let proyecto of proyectosList">
             <div class="row">
-              <a href="#" class="timeline">
+              <div class="timeline">
                 <div class="timeline-icon">
                   <i class="fa-solid fa-globe"></i>
                 </div>
                 <div class="timeline-content">
                   <div class="icon">
+                    <a href ="{{proyecto.urlProyecto}}" target=”_blank”>
                     <h3 class="title">{{proyecto.nombre}}</h3>
+                  </a>
                     <a class="nav-link" href="/editar-proyecto/{{proyecto.idProy}}"*ngIf="isLogged" title="editar"
                       ><i class="fa-solid fa-pen" style="color: #3e4a5e"></i
                     ></a>
-                    <a class="nav-link" href="#" *ngIf="isLogged" (click)= "borrar(proyecto.idProy)" title="borrar"
+                    <a class="nav-link" style="cursor:pointer;" *ngIf="isLogged" (click)= "borrar(proyecto.idProy)" title="borrar"
                       ><i
                         class="fa-solid fa-trash-can"
                         style="color: #3e4a5e"
@@ -42,7 +44,7 @@
                     <!-- 2022 - Desarrollo de una aplicación web full stack para Argentina programa #YoProgramo, que muestre el propio portfolio web a traves de una aplicación de arquitectura distribuida. -->
                   </p>
                 </div>
-              </a>
+              </div>
             </div>
           </li>
         </div>

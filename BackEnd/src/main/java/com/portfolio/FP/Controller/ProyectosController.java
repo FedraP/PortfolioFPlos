@@ -47,9 +47,9 @@ public class ProyectosController {
     
     @DeleteMapping ("/proyectos/borrar/{id}")
     
-    public String borrarProyecto(@PathVariable Long id){
+    public void borrarProyecto(@PathVariable Long id){
         iProyServ.borrarProyecto(id);
-        return "El proyecto fue eliminado correctamente";
+        //return "El proyecto fue eliminado correctamente";
     }
     
     @PutMapping ("/proyectos/editar/{id}")

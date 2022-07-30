@@ -42,16 +42,16 @@ public class CursoController {
 
     
     @PostMapping ("/curso/crear")
-    public String crearCurso (@RequestBody Curso curso){
+    public void crearCurso (@RequestBody Curso curso){
         iCursoServ.crearCurso (curso);
-        return "El cursoo fue creado correctamente";
+        //return "El cursoo fue creado correctamente";
     }
     
     @DeleteMapping ("/curso/borrar/{id}")
     
-    public String borrarCurso(@PathVariable Long idCurso){
+    public void borrarCurso(@PathVariable Long idCurso){
         iCursoServ.borrarCurso(idCurso);
-        return "El ecurso fue eliminado correctamente";
+        //return "El ecurso fue eliminado correctamente";
     }
     
     @PutMapping ("/curso/editar/{id}")

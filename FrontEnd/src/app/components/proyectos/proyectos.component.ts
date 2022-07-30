@@ -39,10 +39,12 @@ export class ProyectosComponent implements OnInit {
   }
 
   borrar(id?: number){
+    console.log('Banderita2');
     if(id != undefined){
       this.datosProyectos.borrarProy(id).subscribe(
         data =>{
           this.cargarProyecto();
+          alert("El proyecto fue borrado correctamente");
         }, err =>{
           alert(" No se pudo borrar el proyecto");
         }

@@ -34,16 +34,16 @@ public class Establecimiento_EducativoController {
     }   
     
     @PostMapping ("/crear/establecimiento_educativo")
-    public String crearEstablecimientoEdu (@RequestBody Establecimiento_educativo establecimientoEdu){
+    public void crearEstablecimientoEdu (@RequestBody Establecimiento_educativo establecimientoEdu){
         iEstEduServ.crearEstablecimientoEdu (establecimientoEdu);
-        return "El establecimiento educativo fue creado correctamente";
+        //return "El establecimiento educativo fue creado correctamente";
     }
     
     @DeleteMapping ("/borrar/establecimiento_educativo/{id}")
     
-    public String borrarEstablecimientoEdu(@PathVariable Long idEstEdu){
+    public void borrarEstablecimientoEdu(@PathVariable Long idEstEdu){
         iEstEduServ.borrarEstablecimientoEdu(idEstEdu);
-        return "El establecimiento educativo fue eliminado correctamente";
+        //return "El establecimiento educativo fue eliminado correctamente";
     }
     
     @PutMapping ("/editar/establecimiento_educativo/{id}")

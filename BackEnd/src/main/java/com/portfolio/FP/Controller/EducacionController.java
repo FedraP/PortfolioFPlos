@@ -52,9 +52,9 @@ import org.springframework.web.bind.annotation.RestController;
     }
     
     @DeleteMapping ("/educacion/borrar/{id}")
-    public String borrarEducacion(@PathVariable Long id){
+    public void borrarEducacion(@PathVariable Long id){
         iEduServ.borrarEducacion(id);
-        return "La educacion fue eliminada correctamente";
+        //return "La educacion fue eliminada correctamente";
     }
     
     @PutMapping ("/educacion/editar/{id}")

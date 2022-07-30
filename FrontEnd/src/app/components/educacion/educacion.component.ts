@@ -48,6 +48,7 @@ export class EducacionComponent implements OnInit {
         this.datosEducacion.borrarEdu(id).subscribe(
           data =>{
             this.cargarEducacion();
+            alert("La educación fue borrada correctamente");
           }, err =>{
             alert(" No se pudo borrar la experiencia");
           }

@@ -44,23 +44,23 @@ public class RedesController {
      }
     
     @PostMapping ("/redes/crear")
-    public String crearRedS (@RequestBody Redes proy){
+    public void crearRedS (@RequestBody Redes proy){
         iRedServ.crearRedS(proy);
-        return "La red social fue creada correctamente";
+        //return "La red social fue creada correctamente";
     }
     
     @DeleteMapping ("/redes/borrar/{id}")
     
-    public String borrarRedS(@PathVariable Long id){
+    public void borrarRedS(@PathVariable Long id){
         iRedServ.borrarRedS(id);
-        return "La red social fue eliminada correctamente";
+        //return "La red social fue eliminada correctamente";
     }
     
     @PutMapping ("/redes/editar/{id}")
     
-    public String editarRedS (@RequestBody Redes redS){
+    public void editarRedS (@RequestBody Redes redS){
         iRedServ.editarRedS(redS);
-        return "La red social fue modificada correctamente";
+        //return "La red social fue modificada correctamente";
     }
     
     

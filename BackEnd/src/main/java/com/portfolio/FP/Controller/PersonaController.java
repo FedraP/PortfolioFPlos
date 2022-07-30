@@ -59,9 +59,9 @@ public class PersonaController {
     
     //@PreAuthorize("hasRole('ADMIN')")
     @DeleteMapping ("/persona/borrar/{id}")
-    public String borrarPersona(@PathVariable Long id){
+    public void borrarPersona(@PathVariable Long id){
         iPersoServ.borrarPersona(id);
-        return "La persona fue eliminada correctamente";
+        //return "La persona fue eliminada correctamente";
     }
     
     //@PreAuthorize("hasRole('ADMIN')")

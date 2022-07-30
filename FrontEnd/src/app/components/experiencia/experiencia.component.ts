@@ -46,6 +46,7 @@ export class ExperienciaComponent implements OnInit {
         this.datosExperiencia.borrarExp(id).subscribe(
           data =>{
             this.cargarExperiencia();
+            alert("La experiencia fue borrada correctamente");
           }, err =>{
             alert(" No se pudo borrar la experiencia");
           }
