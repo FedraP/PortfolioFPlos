@@ -8,7 +8,7 @@ import { redes } from '../model/redes.model';
 })
 export class RedesService {
 
-  URL ='http://localhost:8080/redes/' 
+  URL ='https://portfoliofp.herokuapp.com/redes/' 
 
   constructor(private http:HttpClient) { }
 

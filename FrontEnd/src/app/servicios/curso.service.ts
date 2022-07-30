@@ -8,7 +8,7 @@ import { curso } from '../model/curso.model';
 })
 export class CursoService {
 
-  URL ='http://localhost:8080/curso/' 
+  URL ='https://portfoliofp.herokuapp.com/curso/' 
 
   constructor(private http:HttpClient) { }
 

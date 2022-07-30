@@ -13,7 +13,7 @@ import { NuevoUsuario } from '../model/nuevo-usuario';
 })
 export class AutenticacionService {
 
-  authURL = 'http://localhost:8080/auth/';
+  authURL = 'https://portfoliofp.herokuapp.com/auth/';
 
   constructor(private httpClient:HttpClient) { }
 
